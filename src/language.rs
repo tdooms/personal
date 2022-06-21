@@ -1,4 +1,4 @@
-use cobul::props::{ColumnSize, HeaderSize};
+use cobul::props::{ColumnSize};
 use cobul::*;
 use yew::*;
 

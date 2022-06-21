@@ -1,10 +1,10 @@
-use cobul::props::{Color, HeaderSize, ImageSize};
+use cobul::props::{HeaderSize, ImageSize};
 use cobul::*;
 use yew::*;
 
 #[derive(serde::Deserialize, Properties, PartialEq, Clone, Debug)]
 pub struct ExperienceData {
-    pub picture: &'static str,
+    pub image: &'static str,
 
     pub start: &'static str,
     pub end: &'static str,
@@ -17,7 +17,7 @@ pub struct ExperienceData {
 
 #[function_component(Experience)]
 pub fn experience(props: &ExperienceData) -> Html {
-    let image = html! {<Image size={ImageSize::Is48x48} src={props.picture}/>};
+    let image = html! {<Image size={ImageSize::Is48x48} src={props.image} class="m-0"/>};
     html! {
         <Block>
         <Card>

@@ -2,6 +2,7 @@ mod achievement;
 mod education;
 mod experience;
 mod language;
+mod project;
 mod skill;
 mod talent;
 
@@ -9,10 +10,11 @@ use achievement::*;
 use education::*;
 use experience::*;
 use language::*;
+use project::*;
 use skill::*;
 use talent::*;
 
-use cobul::props::{Color, ColumnSize, HeaderSize, ImageSize};
+use cobul::props::{ColumnSize, HeaderSize, ImageSize};
 use cobul::*;
 use std::collections::HashMap;
 use yew::prelude::*;
@@ -32,6 +34,7 @@ struct Cv {
 
     languages: Vec<LanguageData>,
     experiences: Vec<ExperienceData>,
+    projects: Vec<&'static str>,
 }
 
 #[function_component(App)]
@@ -56,8 +59,12 @@ fn app() -> Html {
         { for cv.talents.iter().map(|x| html! {<Talent name={x.clone()}/>}) }
     };
 
-    let frameworks = html! {
+    let languages = html! {
         { for cv.languages.iter().map(|x| html! {<Language ..x.clone()/>}) }
+    };
+
+    let experiences = html! {
+        { for cv.experiences.iter().map(|x| html! {<Experience ..x.clone()/>}) }
     };
 
     let educations = html! {
@@ -68,20 +75,21 @@ fn app() -> Html {
         { for cv.achievements.iter().map(|x| html! {<Achievement text={x.clone()}/>}) }
     };
 
+    let projects = html! {
+        { for cv.projects.iter().map(|x| html! {<Project text={x.clone()}/>}) }
+    };
+
     let left = html! {
         <>
-            <Columns centered=true>
-            <Column size={ColumnSize::Is6}>
-            <Image size={ImageSize::Is128x128} rounded=true src="picture.jpg"/>
-            </Column>
-            </Columns>
+            <div class="has-text-centered">
+            <Image size={ImageSize::Is128x128} rounded=true src="picture.jpg" class="is-inline-block"/>
+            </div>
 
-
-            <Subtitle size={HeaderSize::Is4} class="has-text-centered mb-3"> {"Thomas Dooms"} </Subtitle>
-            <Subtitle size={HeaderSize::Is6} class="has-text-centered has-text-grey"> {"Antwerp, Belgium"} </Subtitle>
+            <Subtitle size={HeaderSize::Is4} class="has-text-centered mb-3"> {cv.name} </Subtitle>
+            <Subtitle size={HeaderSize::Is6} class="has-text-centered has-text-grey"> {cv.location} </Subtitle>
 
             <Block>
-            <Title size={HeaderSize::Is5} class="has-text-centered"> {"Data scientist"} </Title>
+            <Title size={HeaderSize::Is5} class="has-text-centered"> {cv.profession} </Title>
             </Block>
 
             <hr class="has-background-black"/>
@@ -97,8 +105,13 @@ fn app() -> Html {
         <Tags>
         {talents}
         </Tags>
+        <Title> {"Achievements, Honours and Awards"}</Title>
+        {achievements}
+        <Title> {"Experience"} </Title>
+        {experiences}
         <Title> {"Academic projects"} </Title>
         <Title> {"Personal projects"} </Title>
+        {projects}
         </Content>
     };
 
@@ -106,7 +119,7 @@ fn app() -> Html {
         <>
         <Title> {"Languages"} </Title>
         <Columns multiline=true>
-        {frameworks}
+        {languages}
         </Columns>
         <Title> {"Education"} </Title>
         {educations}

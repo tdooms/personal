@@ -1,4 +1,3 @@
-use cobul::props::{Color, ColumnSize, Size};
 use cobul::*;
 use yew::*;
 
@@ -10,9 +9,11 @@ pub struct AchievementData {
 #[function_component(Achievement)]
 pub fn achievement(props: &AchievementData) -> Html {
     html! {
+        <p>
         <IconText>
         <Icon icon="fas fa-trophy"/>
         <span> {props.text} </span>
         </IconText>
+        </p>
     }
 }

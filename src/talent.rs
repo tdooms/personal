@@ -1,4 +1,4 @@
-use cobul::props::{Color, ColumnSize, Size};
+use cobul::props::{Color, Size};
 use cobul::*;
 use yew::*;
 
