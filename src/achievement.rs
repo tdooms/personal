@@ -7,8 +7,8 @@ pub struct AchievementData {
     pub text: &'static str,
 }
 
-#[function_component(Talent)]
-pub fn achievements(props: &AchievementData) -> Html {
+#[function_component(Achievement)]
+pub fn achievement(props: &AchievementData) -> Html {
     html! {
         <IconText>
         <Icon icon="fas fa-trophy"/>
