@@ -1,0 +1,115 @@
+{
+    "name": "Thomas Dooms",
+    "location": "Antwerp, Belgium",
+    "profession": "Software Engineer",
+
+    "introduction": "I ma le sir patrcik. This is Patrick.This is Patrick.This is Patrick.This is Patrick.This is Patrick.This is Patrick.This is Patrick.This is Patrick.This is Patrick.This is Patrick.This is Patrick.This is Patrick.This is Patrick.This is Patrick.This is Patrick.This is Patrick.This is Patrick.This is Patrick.This is Patrick.This is Patrick.This is Patrick.This is Patrick.This is Patrick.This is Patrick.This is Patrick.This is Patrick.This is Patrick.This is Patrick.This is Patrick.This is Patrick.",
+
+    "skills": {
+        "Rust": {
+            "Yew, Seed": 5,
+            "Rocket, Warp": 5,
+            "Bevy": 4
+        },
+        "Python": {
+            "Plotly, Seaborn": 3,
+            "Numpy, Pandas, Scipy": 4,
+            "PyTorch, sklearn": 3,
+            "Gym": 4
+        },
+        "C++": {
+            "Boost": 4,
+            "Qt": 4
+        },
+        "Tools & Scripting": {
+            "LaTeX, Markdown": 4,
+            "HTML, CSS": 4,
+            "Bash": 3,
+            "Docker, Nginx": 3,
+            "GraphQL": 4,
+            "Postgres, SQLite": 4,
+            "Office 365": 4
+        },
+        "Languages": {
+            "Dutch (native)": 5,
+            "French (bilingual)": 5,
+            "English": 4
+        }
+    },
+    "achievements": [
+        "6-time top 100 Flemish math olympiad",
+        "2nd place on Wiskunnend Wiske",
+        "best student award: Operating systems",
+        "2-time Flemish physics olympiad semi-finalist",
+        "semi-finalist for chemistry and general sciences Flemish olympiad"
+    ],
+    "talents": ["Cooperation", "Leader", "Creative", "AI"],
+    "educations": [
+        {
+            "start": "Sep 2018",
+            "end": "July 2021",
+            "institution": "UAntwerp",
+            "grade": "Magna Cum Laude",
+            "subject": "Bachelor of Computer Science",
+            "image": "https://yt3.ggpht.com/ytc/AKedOLQp1LjpRZSw9NBjqUGVQ7_Sa-CBluTsI1UvVJT7XA=s900-c-k-c0x00ffffff-no-rj"
+        },
+        {
+            "start": "Sep 2019",
+            "end": "Aug 2021",
+            "institution": "UAntwerp",
+            "grade": "Magna Cum Laude",
+            "subject": "Honours programme, Sciences",
+            "image": "https://yt3.ggpht.com/ytc/AKedOLQp1LjpRZSw9NBjqUGVQ7_Sa-CBluTsI1UvVJT7XA=s900-c-k-c0x00ffffff-no-rj"
+        },
+        {
+            "start": "Sep 2021",
+            "end": "July 2023",
+            "institution": "UAntwerp",
+            "grade": "Magna Cum Laude",
+            "subject": "Master in Artificial Intelligence and Data Science",
+            "image": "https://yt3.ggpht.com/ytc/AKedOLQp1LjpRZSw9NBjqUGVQ7_Sa-CBluTsI1UvVJT7XA=s900-c-k-c0x00ffffff-no-rj"
+        }
+    ],
+    "languages": [
+        {
+            "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1200px-Python-logo-notext.svg.png",
+            "title": "Python",
+            "sub": "5 years exp"
+        },
+        {
+            "image": "https://rustacean.net/assets/rustacean-flat-happy.png",
+            "title": "Rust",
+            "sub": "3 years exp"
+        },
+        {
+            "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/ISO_C%2B%2B_Logo.svg/1822px-ISO_C%2B%2B_Logo.svg.png",
+            "title": "C++",
+            "sub": "3 years exp"
+        },
+        {
+            "image": "https://www.malekal.com/wp-content/uploads/Java_logo.jpg",
+            "title": "Java",
+            "sub": "2 years exp"
+        },
+        {
+            "image": "https://upload.wikimedia.org/wikipedia/commons/3/3b/Javascript_Logo.png",
+            "title": "JavaScript",
+            "sub": "2 years exp"
+        },
+        {
+            "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/R_logo.svg/2560px-R_logo.svg.png",
+            "title": "R",
+            "sub": "1 year exp"
+        }
+    ],
+    "experiences": [
+        {
+            "start":"Sep 2018",
+            "end":"Aug 2021",
+            "picture": "https://rustacean.net/assets/rustacean-flat-happy.png",
+            "company":"Cuberdon Software Solutions",
+            "position": "Junior",
+            "comment": ""
+        }
+    ]
+}
