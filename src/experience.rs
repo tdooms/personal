@@ -1,4 +1,3 @@
-use cobul::props::{HeaderSize, ImageSize};
 use cobul::*;
 use yew::*;
 
@@ -26,7 +25,7 @@ pub fn experience(props: &ExperienceData) -> Html {
             <Title size={HeaderSize::Is4}> {props.company} </Title>
             <Subtitle size={HeaderSize::Is6}> {props.start} {" - "} {props.end} </Subtitle>
             </Media>
-            <Title size={HeaderSize::Is5}> {props.position} </Title>
+            // <Title size={HeaderSize::Is5}> {props.position} </Title>
             <span>{props.comment}</span>
         </Content>
         </Card>

@@ -1,4 +1,3 @@
-use cobul::props::{ColumnSize};
 use cobul::*;
 use yew::*;
 
@@ -15,7 +14,7 @@ pub fn language(props: &LanguageData) -> Html {
         <Column size={ColumnSize::Is6}>
         <Card>
             <Block>
-            <img style="height:70px; margin-left:auto; margin-right:auto; display: block;" src={props.image}/>
+            <img style="height:75px; margin-left:auto; margin-right:auto; display: block;" src={props.image}/>
             </Block>
 
             <p class="has-text-centered"><b> {props.title} </b></p>

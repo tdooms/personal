@@ -19,6 +19,16 @@ main {
     filter: blur(5px)
 }
 
+.hoverable:hover {
+    background-color: #e6e6e6;
+    color: hsl(348, 100%, 61%) ;
+}
+
+.selected {
+    background-color: #e6e6e6;
+    color: hsl(348, 100%, 61%);
+}
+
 /*slider css*/
 .slider {
     -webkit-appearance: none;

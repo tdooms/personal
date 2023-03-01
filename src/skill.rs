@@ -1,4 +1,3 @@
-use cobul::props::{ColumnSize};
 use cobul::*;
 use yew::*;
 
@@ -14,10 +13,10 @@ pub fn skill(props: &SkillData) -> Html {
 
     html! {
         <Columns>
-        <Column size={ColumnSize::Is7} class="py-1">
+        <Column size={ColumnSize::Is7} class="py-1 pr-0">
             <b>{props.name}</b>
         </Column>
-        <Column class="py-1">
+        <Column class="py-1 pl-0">
             {for (0..5).map(|i| html!{ <Icon icon={"fas fa-circle"} class={classes!(f(i))}/>}) }
         </Column>
         </Columns>

@@ -1,4 +1,3 @@
-use cobul::props::{HeaderSize, ImageSize};
 use cobul::*;
 use yew::*;
 
