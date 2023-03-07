@@ -7,6 +7,7 @@ mod skill;
 mod talent;
 mod research;
 mod contact;
+mod image;
 
 use achievement::*;
 use education::*;
@@ -114,15 +115,19 @@ fn app() -> Html {
         <Title size={HeaderSize::Is4} class="mb-3"> {"Introduction"} </Title>
         { for cv.introduction.iter().map(|intro| html!{ <p style="text-align: justify">{intro}</p> }) }
 
-        <Title size={HeaderSize::Is4} class="mb-3"> {"Talents"} </Title>
+        <Block />
 
+        <Title size={HeaderSize::Is4} class="mb-3"> {"Talents"} </Title>
         <Tags> { for cv.talents.iter().map(|x| html! {<Talent name={x.clone()}/>}) } </Tags>
+
+        <Block />
 
         <Title size={HeaderSize::Is4} class="mb-3"> {"Achievements, Honours and Awards"} </Title>
         { for cv.achievements.iter().map(|x| html! {<Achievement text={x.clone()}/>}) }
 
-        <Title size={HeaderSize::Is4} class="mb-3"> {"Hobbies & interests"} </Title>
+        <Block />
 
+        <Title size={HeaderSize::Is4} class="mb-3"> {"Hobbies & interests"} </Title>
         <Tags> { for cv.hobbies.iter().map(|x| html! {<Tag size={Size::Large}> {x.clone()} </Tag>}) } </Tags>
 
         </Content>
@@ -147,6 +152,7 @@ fn app() -> Html {
             <Column class="has-text-right py-0"> {"proficient"} </Column>
         </Columns>
         <progress class="progress is-danger" style="height:0.5rem" value="80" max="100">{"80%"}</progress>
+        <Block style="margin-bottom: 2.9rem" />
         </>
     };
 
@@ -194,21 +200,17 @@ fn app() -> Html {
     };
 
     let research = html! {
-        <Columns>
-        { for cv.research.iter().map(|x| html! {<Column> <Research ..x.clone()/> </Column>}) }
-        </Columns>
+        { for cv.research.iter().map(|x| html! {<Research ..x.clone()/>}) }
     };
 
     let class = "pl-5 pt-0 mb-3 pb-0 has-background-light";
 
-    let options = ["hoverable", "selected"];
-
     let view_tab = |tab: Tab| {
-        let state = if tab == model.value {"selected"} else {"hoverable"};
+        let state = if tab == model.value {"my-navbar-selected"} else {"my-navbar-item"};
         let class = classes!("column", state);
 
         html! {
-            <div {class} onclick={model.input.reform(move |_| tab)} style="cursor:pointer">
+            <div {class} onclick={model.input.reform(move |_| tab)}>
             <Icon icon={tab.icon().unwrap()} /> <span> {tab.to_string()} </span>
             </div>
         }
@@ -217,7 +219,7 @@ fn app() -> Html {
     let body = match model.value {
         Tab::General => html! {
             <Columns>
-            <Column size={ColumnSize::Is3} {class}> {profile} <Contact ..cv.contact /> <hr class="has-background-black"/> {languages} </Column>
+            <Column size={ColumnSize::Is3} {class}> {profile} <Contact ..cv.contact /> <Block class="my-6 py-6"/> {languages} </Column>
             <Column class="mx-4"> {general} </Column>
             <Column class="mr-4" size={ColumnSize::Is3}> {education} </Column>
             </Columns>
@@ -238,8 +240,8 @@ fn app() -> Html {
         },
         Tab::Research => html! {
             <Columns>
-            <Column size={ColumnSize::Is3} {class}> {profile} {"heya"} </Column>
-            <Column class="px-0"> {research} </Column>
+            <Column size={ColumnSize::Is3} style="height: 906.2px" {class}> {profile} {""} </Column>
+            <Column class="mx-4"> {research} </Column>
             </Columns>
         }
     };

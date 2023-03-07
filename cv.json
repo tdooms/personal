@@ -8,7 +8,7 @@
     "contact": {
         "email": "thomas@dooms.eu",
         "phone": "+32 478 52 34 43",
-        "address": "2000 Antwerp, Belgium",
+        "address": "Karel Rogierstraat, Antwerpen",
         "linkedin": "https://www.linkedin.com/in/thomas-dooms-5518a4169/",
         "github": "https://github.com/tdooms"
     },
@@ -42,13 +42,13 @@
         "semi-finalist for chemistry and general sciences Flemish olympiad"
     ],
     "talents": ["Determined", "Creative"],
-    "hobbies": ["Cycling", "Gaming", "Programming", "Music", "Reading"],
+    "hobbies": ["Cycling", "Gaming", "Programming", "Music", "Reading", "Chess puzzles"],
     "educations": [
         {
             "start": "Sep 2021",
             "end": "July 2023",
             "institution": "UAntwerp",
-            "grade": "Magna Cum Laude (82%)",
+            "grade": "Magna Cum Laude (82%) *",
             "subject": "Master in Artificial Intelligence and Data Science",
             "image": "https://yt3.ggpht.com/ytc/AKedOLQp1LjpRZSw9NBjqUGVQ7_Sa-CBluTsI1UvVJT7XA=s900-c-k-c0x00ffffff-no-rj"
         },
@@ -158,7 +158,7 @@
     "academic": [
         {
             "name": "meme.ir",
-            "link": "",
+            "link": "https://github.com/tdooms/meme.ir",
             "date": "2022",
             "description": "A group project in which we finetuned transformer model to predict a meme template given only the text. We achieved 70% top-1 accuracy on 100 templates."
         },
@@ -176,54 +176,63 @@
         },
         {
             "name": "Space Invaders",
-            "link": "",
+            "link": "https://github.com/tdooms/space-invaders",
             "date": "2019",
             "description": "A complete retro-styled Space Invaders game with multiple space ships, stages and leaderboards written in C++ with SFML."
         }
     ],
     "personal": [
         {
-            "name": "C++ ini parser",
-            "link": "",
-            "date": "2018",
-            "description": "A Pythonic ini parser written in c++ using template hacking."
+            "name": "PixelGuesser",
+            "link": "https://github.com/tdooms/pixelguesser",
+            "date": "2022",
+            "description": "PixelGuesser is a party game where players have to guess the contents of a heavily pixelated image which slowly grows more detailed over time. "
         },
         {
             "name": "Ray marching renderer",
-            "link": "",
-            "date": "2020",
-            "description": "Easy to use ray marching renderer using JSON for scene description."
+            "link": "https://github.com/tdooms/paw",
+            "date": "2021",
+            "description": "Easy to use ray marching renderer using JSON for scene description. Many primitives, composables and textures are supported."
         },
         {
-            "name": "PixelGuesser",
-            "link": "",
+            "name": "Smort home",
+            "link": "https://github.com/tdooms/smort-home",
             "date": "2021",
-            "description": "PixelGuesser is a party game where players have to guess the contents of a heavily pixelated image which slowly grows more detailed over time. "
+            "description": "Toy application to explore the world of home automation. It allows to control yeelight smart lights via steam or telegram messages."
+        },
+        {
+            "name": "C++ ini parser",
+            "link": "https://github.com/tdooms/ini-parser",
+            "date": "2019",
+            "description": "A Pythonic ini parser written in c++ using template hacking. The main goals are speed and ease of use. The ini file is read using a performant custom parser."
         }
     ],
     "research": [
         {
             "name": "Transforming Diffusion",
-            "description": "Research on transformers, diffusion models and their combination. In this work we explore the transformer architecture, attemps to reduce its complexity, ways to scale them up and how it is used in image synthesis. Our exploration covered the cutting-edge technologies such as eDiff-I that was released in December of 2022.",
+            "description": "Research on transformers, diffusion models and their combination. In this work we explore the transformer architecture, attemps to reduce its complexity, ways to scale them up and how it is used in image synthesis. Our exploration covered the cutting-edge technologies such as Stable Diffusion, Imagen, eDiff-I, Reformer, Bert, GPT-3, and many others",
             "source": "Transformers United (Stanford CS25)",
-            "span": "Sep 2022 - Jan 2023",
-            "image": "",
+            "start": "Sep 2022",
+            "end": "Jan 2023",
+            "image": "diffusion.png",
             "paper": "",
             "video": ""
         },
         {
             "name": "Deep multitask and meta-learning",
-            "description": "",
+            "description": "While deep learning has achieved remarkable success in many problems such as image classification, natural language processing, and speech recognition, these models are, to a large degree, specialized for the single task they are trained for. This course will cover the setting where there are multiple tasks to be solved, and study how the structure arising from multiple tasks can be leveraged to learn more efficiently or effectively.",
             "source": "Deep Multi-Task and Meta Learning (Stanford CS330)",
-            "span": "Feb 2023 - June 2023",
-            "image": ""
+            "start": "Feb 2023",
+            "end": "June 2023",
+            "image": "meta.jpg"
         },
         {
-            "name": "Characterizing the learning process of spiking neural networks",
-            "description": "Analyzing and improving performance of SNNs on data-dense tasks such as image classification.",
-            "span": "Sep 2022 - Jun 2023",
+            "name": "Spiking neural networks learning process",
+            "description": "Spiking Neural Networks (SNNs) are regarded as third generation neural networks. They offer a more accurate representation of the neurons and synapses in our brain that communicate through spike trains rather than floating point numbers used in ordinary Artificial Neural Networks (ANNs). Incidentally, the sparse spiking mechanism of SNNs is suitable for hardware implementation since it enables the replacement of costly matrix multiplications with more efficient additions and bitand operations. However, training SNNs poses a challenging task due to the non-differentiable nature of spikes, making ordinary back propagation techniques inapplicable. In my thesis, I delve into alternative learning techniques suggested in contemporary literature and experiment with innovative ideas to address this issue.",
+            "start": "Sep 2022",
+            "end": "Jun 2023",
             "source": "",
-            "image": ""
+            "image": "spike.png"
         }
     ]
 }

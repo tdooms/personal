@@ -13,16 +13,14 @@ pub struct ProjectData {
 
 #[function_component(Project)]
 pub fn project(props: &ProjectData) -> Html {
-    let navigator = use_navigator().unwrap();
-
-    let click = Callback::from(|_| {
-        // let _ = web_sys::window().unwrap().open_with_url(props.link);
+    let onclick = Callback::from(|_| {
+        web_sys::window().unwrap().open_with_url(props.link).unwrap();
     });
-    let icon = html! { <Icon icon={Brands::Github} {click} size={Size::Large} style="cursor:pointer" />};
+    let icon = html! { <Icon icon={Brands::Github} size={Size::Large} />};
 
     html! {
-        <Block>
-        <Card>
+        <div class="block" {onclick}>
+        <Card class="my-project-item">
         <Content>
             <Media left={icon}>
             <Title size={HeaderSize::Is4}> {props.name} </Title>
@@ -31,6 +29,6 @@ pub fn project(props: &ProjectData) -> Html {
             <span>{props.description}</span>
         </Content>
         </Card>
-        </Block>
+        </div>
     }
 }

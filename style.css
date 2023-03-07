@@ -19,14 +19,20 @@ main {
     filter: blur(5px)
 }
 
-.hoverable:hover {
-    background-color: #e6e6e6;
-    color: hsl(348, 100%, 61%) ;
-}
-
-.selected {
+.my-navbar-item:hover {
     background-color: #e6e6e6;
     color: hsl(348, 100%, 61%);
+    cursor: pointer;
+}
+
+.my-navbar-selected {
+    background-color: #e6e6e6;
+    color: hsl(348, 100%, 61%);
+}
+
+.my-project-item:hover {
+    background-color: #e6e6e6;
+    cursor: pointer;
 }
 
 /*slider css*/

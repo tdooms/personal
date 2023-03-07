@@ -10,6 +10,8 @@ yew = { version = "0.20", features = ["csr"] }
 yew-router = "0.17.0"
 cobul = { git = "https://github.com/tdooms/cobul.git", features = ["fa", "simple"] }
 
+web-sys = { version = "0.3", features = ["Window"] }
+
 strum = { version = "0.24", features = ["derive"] }
 serde = { version = "1.0", features = ["derive"]}
 serde_json = "1.0"
