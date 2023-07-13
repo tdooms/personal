@@ -4,7 +4,7 @@ mod experience;
 mod language;
 mod project;
 mod skill;
-mod talent;
+mod r#trait;
 mod research;
 mod contact;
 mod image;
@@ -15,7 +15,7 @@ use experience::*;
 use language::*;
 use project::*;
 use skill::*;
-use talent::*;
+use r#trait::*;
 use research::*;
 use contact::*;
 
@@ -34,12 +34,13 @@ struct Cv {
     name: &'static str,
     location: &'static str,
     profession: &'static str,
+    picture: &'static str,
     introduction: Vec<&'static str>,
 
     contact: ContactData,
     hobbies: Vec<&'static str>,
     skills: HashMap<&'static str, HashMap<&'static str, i64>>,
-    talents: Vec<&'static str>,
+    traits: Vec<&'static str>,
     achievements: Vec<&'static str>,
 
     educations: Vec<EducationData>,
@@ -47,6 +48,7 @@ struct Cv {
 
     trajectory: Vec<&'static str>,
     experiences: Vec<ExperienceData>,
+    explanation: Vec<&'static str>,
 
     evolution: Vec<&'static str>,
     academic: Vec<ProjectData>,
@@ -92,7 +94,7 @@ fn app() -> Html {
     let profile = html! {
         <>
         <div class="has-text-centered">
-        <Image size={ImageSize::Is128x128} rounded=true src="picture.jpg" class="is-inline-block"/>
+        <Image size={ImageSize::Is128x128} rounded=true src={cv.picture} class="is-inline-block"/>
         </div>
 
         <Subtitle size={HeaderSize::Is4} class="has-text-centered mb-3"> {cv.name} </Subtitle>
@@ -117,8 +119,8 @@ fn app() -> Html {
 
         <Block />
 
-        <Title size={HeaderSize::Is4} class="mb-3"> {"Talents"} </Title>
-        <Tags> { for cv.talents.iter().map(|x| html! {<Talent name={x.clone()}/>}) } </Tags>
+        <Title size={HeaderSize::Is4} class="mb-3"> {"Traits"} </Title>
+        <Tags> { for cv.traits.iter().map(|x| html! {<Trait name={x.clone()}/>}) } </Tags>
 
         <Block />
 
@@ -156,12 +158,12 @@ fn app() -> Html {
         </>
     };
 
-    let trajectory = html! {
-        { for cv.trajectory.iter().map(|x| html! {<Block style="text-align: center">{x}</Block>}) }
-    };
-
     let evolution = html! {
         { for cv.evolution.iter().map(|x| html! {<Block style="text-align: center">{x}</Block>}) }
+    };
+
+    let explanation = html! {
+        { for cv.explanation.iter().map(|x| html! {<Block style="text-align: center">{x}</Block>}) }
     };
 
     let experience = html! {
@@ -219,28 +221,28 @@ fn app() -> Html {
     let body = match model.value {
         Tab::General => html! {
             <Columns>
-            <Column size={ColumnSize::Is3} {class}> {profile} <Contact ..cv.contact /> <Block class="my-6 py-6"/> {languages} </Column>
+            <Column size={ColumnSize::Is3} {class} style="height: 100vh"> {profile} <Contact ..cv.contact /> <Block class="my-6"/> {languages} </Column>
             <Column class="mx-4"> {general} </Column>
             <Column class="mr-4" size={ColumnSize::Is3}> {education} </Column>
             </Columns>
         },
         Tab::Experience => html! {
             <Columns>
-            <Column size={ColumnSize::Is3} {class}> {profile} {skills} </Column>
+            <Column size={ColumnSize::Is3} {class} style="height: 100vh"> {profile} {skills} </Column>
             <Column class="mx-4"> {experience} </Column>
             <Column class="mr-4" size={ColumnSize::Is3}> {prog_languages} </Column>
             </Columns>
         },
         Tab::Projects => html! {
             <Columns>
-            <Column size={ColumnSize::Is3} {class}> {profile} {evolution} </Column>
+            <Column size={ColumnSize::Is3} {class} style="height: 100vh"> {profile} {evolution} </Column>
             <Column class="mx-4"> {academic} </Column>
             <Column class="mr-4"> {personal} </Column>
             </Columns>
         },
         Tab::Research => html! {
             <Columns>
-            <Column size={ColumnSize::Is3} style="height: 906.2px" {class}> {profile} {""} </Column>
+            <Column size={ColumnSize::Is3} style="height: 100vh" {class}> {profile} {explanation} </Column>
             <Column class="mx-4"> {research} </Column>
             </Columns>
         }

@@ -9,20 +9,28 @@ pub struct ResearchData {
     description: &'static str,
     start: &'static str,
     end: &'static str,
-    source: &'static str,
     image: &'static str,
+    course: Option<&'static str>,
+    source: Option<&'static str>,
     paper: Option<&'static str>,
-    video: Option<&'static str>,
+    presentation: Option<&'static str>,
 }
 
 #[function_component(Research)]
 pub fn research(props: &ResearchData) -> Html {
-    let footer = html! {
-        <>
-        <a href={props.paper}> {"Paper"} </a>
-        <a href={props.video}> {"Video"} </a>
-        </>
+    let click = |url: Option<String>| {
+        Callback::from(move |_| {
+            if let Some(url) = url.clone() {
+                web_sys::window().unwrap().open_with_url(&url).unwrap();
+            }
+        })
     };
+
+    let paper_click = click(props.paper.map(ToString::to_string));
+    let present_click = click(props.source.map(ToString::to_string));
+
+    let d_paper = props.paper.is_none();
+    let d_present = props.presentation.is_none();
 
     html! {
         <Columns>
@@ -33,14 +41,13 @@ pub fn research(props: &ResearchData) -> Html {
         <Content>
             <Title size={HeaderSize::Is4}> {props.name} </Title>
             <Subtitle size={HeaderSize::Is6}> {props.start} {" - "} {props.end} </Subtitle>
-        <span>{props.description}</span>
+            <span> {props.description} </span>
         </Content>
         </Column>
         <Column>
-        <Buttons class="mt-6 mb-3">
-        <simple::Button icon={Solid::File} text="Paper" fullwidth=true outlined=true color={Color::Danger}/>
-        <simple::Button icon={Solid::Video} text="Video" fullwidth=true outlined=true color={Color::Danger} />
-        <simple::Button icon={Solid::Link} text="Source" fullwidth=true outlined=true color={Color::Danger} />
+        <Buttons class="mt-6 mb-3 pt-5">
+            <simple::Button icon={Solid::File} text="Paper" fullwidth=true outlined=true color={Color::Danger} disabled={d_paper} click={paper_click} />
+            <simple::Button icon={Solid::PersonChalkboard} text="Presentation" fullwidth=true outlined=true color={Color::Danger} disabled={d_present} click={present_click} />
         </Buttons>
         </Column>
         </Columns>

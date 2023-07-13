@@ -1,6 +1,5 @@
 use cobul::*;
 use yew::*;
-use yew_router::prelude::*;
 use cobul::fa::Brands;
 
 #[derive(serde::Deserialize, Properties, PartialEq, Clone, Debug)]
