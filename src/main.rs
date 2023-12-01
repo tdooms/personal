@@ -8,6 +8,7 @@ mod r#trait;
 mod research;
 mod contact;
 mod image;
+mod profile;
 
 use achievement::*;
 use education::*;
@@ -18,43 +19,39 @@ use skill::*;
 use r#trait::*;
 use research::*;
 use contact::*;
+use profile::*;
 
 use cobul::*;
-use std::collections::HashMap;
-use cobul::fa::{Brands, Solid};
-use cobul::simple::HasIcon;
+use cobul::icons::{Brands, Solid};
 use yew::prelude::*;
 use yew_router::BrowserRouter;
 use strum::{EnumIter, Display};
-use crate::contact::ContactData;
+use implicit_clone::unsync::{IArray, IMap, IString};
 
 
 #[derive(serde::Deserialize)]
 struct Cv {
-    name: &'static str,
-    location: &'static str,
-    profession: &'static str,
-    picture: &'static str,
-    introduction: Vec<&'static str>,
-
+    profile: ProfileData,
+    introduction: IArray<IString>,
     contact: ContactData,
-    hobbies: Vec<&'static str>,
-    skills: HashMap<&'static str, HashMap<&'static str, i64>>,
-    traits: Vec<&'static str>,
-    achievements: Vec<&'static str>,
 
-    educations: Vec<EducationData>,
-    languages: Vec<LanguageData>,
+    hobbies: IArray<IString>,
+    skills: IMap<IString, IMap<IString, u32>>,
+    traits: IArray<IString>,
+    achievements: IArray<IString>,
 
-    trajectory: Vec<&'static str>,
-    experiences: Vec<ExperienceData>,
-    explanation: Vec<&'static str>,
+    educations: IArray<EducationData>,
+    languages: IArray<LanguageData>,
 
-    evolution: Vec<&'static str>,
-    academic: Vec<ProjectData>,
-    personal: Vec<ProjectData>,
+    // trajectory: IArray<IString>,
+    experiences: IArray<ExperienceData>,
+    explanation: IArray<IString>,
 
-    research: Vec<ResearchData>
+    evolution: IArray<IString>,
+    academic: IArray<ProjectData>,
+    personal: IArray<ProjectData>,
+
+    research: IArray<ResearchData>
 }
 
 #[derive(Clone, Copy, EnumIter, PartialEq, Display)]
@@ -65,7 +62,7 @@ enum Tab {
     Research,
 }
 
-impl HasIcon for Tab {
+impl Tab {
     fn icon(&self) -> Option<String> {
         match self {
             Tab::General => Solid::List.to_string(),
@@ -82,36 +79,6 @@ fn app() -> Html {
     let cv: Cv = serde_json::from_str(json).unwrap();
     let model = use_model(|| Tab::General);
 
-    let view_skills = |(key, values): (&&'static str, &HashMap<&'static str, i64>)| {
-        html! {
-            <>
-            <Subtitle class="has-text-danger"> {key} </Subtitle>
-            { for values.iter().map(|(name, &level)| html! {<Skill ..SkillData{name, level}/>}) }
-            </>
-        }
-    };
-
-    let profile = html! {
-        <>
-        <div class="has-text-centered">
-        <Image size={ImageSize::Is128x128} rounded=true src={cv.picture} class="is-inline-block"/>
-        </div>
-
-        <Subtitle size={HeaderSize::Is4} class="has-text-centered mb-3"> {cv.name} </Subtitle>
-        <Subtitle size={HeaderSize::Is6} class="has-text-centered has-text-grey"> {cv.location} </Subtitle>
-
-        <Block>
-        <Title size={HeaderSize::Is5} class="has-text-centered"> {cv.profession} </Title>
-        </Block>
-
-        <hr class="has-background-black"/>
-        </>
-    };
-
-    let skills = html! {
-        { for cv.skills.iter().map(view_skills) }
-    };
-
     let general = html! {
         <Content>
         <Title size={HeaderSize::Is4} class="mb-3"> {"Introduction"} </Title>
@@ -120,17 +87,17 @@ fn app() -> Html {
         <Block />
 
         <Title size={HeaderSize::Is4} class="mb-3"> {"Traits"} </Title>
-        <Tags> { for cv.traits.iter().map(|x| html! {<Trait name={x.clone()}/>}) } </Tags>
+        <Tags> { for cv.traits.iter().map(|x| html! {<Trait name={x}/>}) } </Tags>
 
         <Block />
 
         <Title size={HeaderSize::Is4} class="mb-3"> {"Achievements, Honours and Awards"} </Title>
-        { for cv.achievements.iter().map(|x| html! {<Achievement text={x.clone()}/>}) }
+        { for cv.achievements.iter().map(|x| html! {<Achievement text={x}/>}) }
 
         <Block />
 
         <Title size={HeaderSize::Is4} class="mb-3"> {"Hobbies & interests"} </Title>
-        <Tags> { for cv.hobbies.iter().map(|x| html! {<Tag size={Size::Large}> {x.clone()} </Tag>}) } </Tags>
+        <Tags> { for cv.hobbies.iter().map(|x| html! {<Tag size={Size::Large}> {x} </Tag>}) } </Tags>
 
         </Content>
     };
@@ -208,41 +175,55 @@ fn app() -> Html {
     let class = "pl-5 pt-0 mb-3 pb-0 has-background-light";
 
     let view_tab = |tab: Tab| {
-        let state = if tab == model.value {"my-navbar-selected"} else {"my-navbar-item"};
+        let state = if tab == model.value() {"my-navbar-selected"} else {"my-navbar-item"};
         let class = classes!("column", state);
 
         html! {
-            <div {class} onclick={model.input.reform(move |_| tab)}>
+            <div {class} onclick={model.reform(move |_| tab)}>
             <Icon icon={tab.icon().unwrap()} /> <span> {tab.to_string()} </span>
             </div>
         }
     };
 
-    let body = match model.value {
+    let body = match model.value() {
         Tab::General => html! {
             <Columns>
-            <Column size={ColumnSize::Is3} {class} style="height: 100vh"> {profile} <Contact ..cv.contact /> <Block class="my-6"/> {languages} </Column>
+            <Column size={ColumnSize::Is3} {class} style="height: 100vh">
+                <Profile ..cv.profile />
+                <Contact ..cv.contact />
+                <Block class="my-6"/>
+                {languages}
+            </Column>
             <Column class="mx-4"> {general} </Column>
             <Column class="mr-4" size={ColumnSize::Is3}> {education} </Column>
             </Columns>
         },
         Tab::Experience => html! {
             <Columns>
-            <Column size={ColumnSize::Is3} {class} style="height: 100vh"> {profile} {skills} </Column>
+            <Column size={ColumnSize::Is3} {class} style="height: 100vh">
+                <Profile ..cv.profile />
+                { for cv.skills.iter().map(|(k, v)| html! { <Skills field={k} skills={v} />}) }
+            </Column>
             <Column class="mx-4"> {experience} </Column>
             <Column class="mr-4" size={ColumnSize::Is3}> {prog_languages} </Column>
             </Columns>
         },
         Tab::Projects => html! {
             <Columns>
-            <Column size={ColumnSize::Is3} {class} style="height: 100vh"> {profile} {evolution} </Column>
+            <Column size={ColumnSize::Is3} {class} style="height: 100vh">
+                <Profile ..cv.profile />
+                {evolution}
+            </Column>
             <Column class="mx-4"> {academic} </Column>
             <Column class="mr-4"> {personal} </Column>
             </Columns>
         },
         Tab::Research => html! {
             <Columns>
-            <Column size={ColumnSize::Is3} style="height: 100vh" {class}> {profile} {explanation} </Column>
+            <Column size={ColumnSize::Is3} style="height: 100vh" {class}>
+                <Profile ..cv.profile />
+                {explanation}
+            </Column>
             <Column class="mx-4"> {research} </Column>
             </Columns>
         }

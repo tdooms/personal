@@ -1,255 +1,279 @@
 {
+  "profile": {
     "name": "Thomas Dooms",
     "location": "Antwerp, Belgium",
-    "profession": "Machine Learning Engineer",
-    "picture": "static/profile.jpg",
-
-    "introduction": ["I am a final-year Master's student in the field of Artificial Intelligence, specializing in machine learning and its current state-of-the-art advancements. My areas of expertise are local learning algorithms, diffusion models, and language models. My primary objective is to establish collaborations with like-minded individuals who share my enthusiasm for using cutting-edge research to improve the field of artificial intelligence.",
-                    "Presently, I am working on my Master's thesis, which aims to enhance the performance of the novel Forward-Forward algorithm. In parallel, I am conducting a research project which looks into the latest research on transformer variants, diffusion models and embodied language models."],
-    "contact": {
-        "email": "thomas@dooms.eu",
-        "phone": "+32 478 52 34 43",
-        "address": "Karel Rogierstraat, Antwerpen",
-        "linkedin": "https://www.linkedin.com/in/thomas-dooms-5518a4169/",
-        "github": "https://github.com/tdooms"
+    "profession": "Machine Learning Researcher",
+    "picture": "static/profile.jpg"
+  },
+  "introduction": [
+    "I am an aspiring doctoral student in machine learning at the University of Antwerp. My field of study will be about interpretability of deep neural networks. ",
+    "I like keeping up with the machine learning state of the art and using this knowledge to develop fun projects.",
+    "My areas of expertise are local learning algorithms, representation learning, diffusion models and language models."
+  ],
+  "contact": {
+    "email": "thomas@dooms.eu",
+    "phone": "+32 478 52 34 43",
+    "address": "Karel Rogierstraat, Antwerpen",
+    "linkedin": "https://www.linkedin.com/in/thomas-dooms-5518a4169/",
+    "github": "https://github.com/tdooms"
+  },
+  "skills": {
+    "Data Science": {
+      "PyTorch, Lightning": 5,
+      "Weights & Biases": 4,
+      "Plotly, Seaborn": 4,
+      "Numpy, Pandas, Scipy": 4,
+      "Candle": 4,
+      "Huggingface": 3
     },
-    "skills": {
-        "Data Science": {
-            "PyTorch, Lightning": 5,
-            "Weights & Biases": 4,
-            "Plotly, Seaborn": 4,
-            "Numpy, Pandas, Scipy": 4,
-            "Gym": 3,
-            "Huggingface": 3
-        },
-        "Frameworks": {
-            "Yew": 5,
-            "Flask, Django": 4,
-            "Rocket, Axum": 4,
-            "Bevy": 4
-        },
-        "Tools & Scripting": {
-            "HTML, CSS": 4,
-            "Bash": 3,
-            "Docker, Nginx": 3,
-            "Postgres, SQLite": 4
-        }
+    "Frameworks": {
+      "Yew": 5,
+      "Flask, Django": 4,
+      "Rocket, Axum": 4,
+      "Bevy": 4
     },
-    "achievements": [
-        "6-time top 100 Flemish math olympiad",
-        "2nd place on collaborative math olympiad",
-        "best student award: operating systems",
-        "2-time Flemish physics olympiad semi-finalist",
-        "semi-finalist for chemistry and general sciences Flemish olympiad",
-        "3rd place in the Belgian cyber security challenge"
-    ],
-    "traits": ["Eager to learn", "Creative", "Quick study", "Detail-Oriented"],
-    "hobbies": ["Cycling", "Gaming", "Programming", "Music", "Reading", "Chess", "VR", "Cooking"],
-    "educations": [
-        {
-            "start": "Oct 2023",
-            "end": "TBD",
-            "institution": "UAntwerp",
-            "subject": "PhD in Machine Learning",
-            "image": "https://yt3.ggpht.com/ytc/AKedOLQp1LjpRZSw9NBjqUGVQ7_Sa-CBluTsI1UvVJT7XA=s900-c-k-c0x00ffffff-no-rj",
-            "topic": "Explainability of implicitly parametrized models"
-        },
-        {
-            "start": "Sep 2021",
-            "end": "Jun 2023",
-            "institution": "UAntwerp",
-            "grade": "Summa Cum Laude (87%)",
-            "subject": "Master in Artificial Intelligence",
-            "image": "https://yt3.ggpht.com/ytc/AKedOLQp1LjpRZSw9NBjqUGVQ7_Sa-CBluTsI1UvVJT7XA=s900-c-k-c0x00ffffff-no-rj"
-        },
-        {
-            "start": "Sep 2019",
-            "end": "Aug 2021",
-            "institution": "UAntwerp",
-            "grade": "Summa Cum Laude (85%)",
-            "subject": "Honours programme, Sciences",
-            "image": "https://yt3.ggpht.com/ytc/AKedOLQp1LjpRZSw9NBjqUGVQ7_Sa-CBluTsI1UvVJT7XA=s900-c-k-c0x00ffffff-no-rj"
-        },
-        {
-            "start": "Sep 2018",
-            "end": "Jun 2021",
-            "institution": "UAntwerp",
-            "grade": "Magna Cum Laude (83%)",
-            "subject": "Bachelor of Computer Science",
-            "image": "https://yt3.ggpht.com/ytc/AKedOLQp1LjpRZSw9NBjqUGVQ7_Sa-CBluTsI1UvVJT7XA=s900-c-k-c0x00ffffff-no-rj"
-        }
-    ],
-    "languages": [
-        {
-            "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1200px-Python-logo-notext.svg.png",
-            "title": "Python",
-            "sub": "5 years"
-        },
-        {
-            "image": "https://rustacean.net/assets/rustacean-flat-happy.png",
-            "title": "Rust",
-            "sub": "3 years"
-        },
-        {
-            "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/ISO_C%2B%2B_Logo.svg/1822px-ISO_C%2B%2B_Logo.svg.png",
-            "title": "C++",
-            "sub": "3 years"
-        },
-        {
-            "image": "https://cdn-icons-png.flaticon.com/512/5968/5968282.png",
-            "title": "Java",
-            "sub": "2 years"
-        },
-        {
-            "image": "https://upload.wikimedia.org/wikipedia/commons/3/3b/Javascript_Logo.png",
-            "title": "JavaScript",
-            "sub": "6 months"
-        },
-        {
-            "image": "https://camo.githubusercontent.com/8d56e87edf99e89bfc457cd62462e0b7aae19e6b197b1df5c542d474d8d76f81/68747470733a2f2f646576656c6f7065722e6665646f726170726f6a6563742e6f72672f7374617469632f6c6f676f2f6373686172702e706e67",
-            "title": "C#",
-            "sub": "3 months"
-        },
-        {
-            "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/R_logo.svg/2560px-R_logo.svg.png",
-            "title": "R",
-            "sub": "2 months"
-        },
-        {
-            "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSa_8amPlPc3XKJiz7UEWQNUJwlscGwzyLvUKq15Dgef64NCCApvmDnBaKqj1XCDq7tLSg&usqp=CAU",
-            "title": "Julia",
-            "sub": "1 month"
-        }
-    ],
-    "trajectory": [
-        "During my studies, I have worked on several projects in a professional context.",
-        "These have been in various fields outside my expertise, each time I adapted quickly and learned a lot."
-    ],
-    "evolution": [
-        "In 2016, I began programming with Processing, creating physics simulations and games. ",
-        "During university, I transitioned to C++ and became very proficient in the language.",
-        "Intrigued by Rust, I explored it for personal projects and fell in love with the language.",
-        "Currently, I primarily work with Python for deep learning and data science."
-    ],
-    "explanation": [
-        "In my master I opted for as many reseach projects as possible. The first two highlighted projects are in collaboration with a fellow student Alexander Belooussov, and are each worth 6 ECTS.",
-        "These projects involve following a Stanford course, conducting research on related topics, writing survey paper, and present to anyone interesting.",
-        "Simultaneously, I am fully engaged in my thesis (3rd highlight), under the guidance and supervision of José Oramas."
-    ],
-    "experiences": [
-        {
-            "start":"Jul 2022",
-            "end":"Sep 2022",
-            "image": "data:image/jpeg;base64,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",
-            "company":"Cuberdon Software Solutions",
-            "position": "Internship",
-            "comment": "Involved with the groundwork for a next-generation customer portal with professional dashboards, dynamic news and document organisation. Full-stack development with Vue, ASP.NET and SQL."
-        },
-        {
-            "start":"Sep 2021",
-            "end":"Jun 2022",
-            "company":"Keysight Technologies",
-            "image": "https://uploads.magnetme-images.com/82e3d34dda5e8f00277a3f50dbcd1e18?auto=format&bg=white&fit=fill&h=250&w=250",
-            "position": "Internship",
-            "comment": "Research project for analyzing, and predicting the power consumption on embedded devices. This research required knowledge of hardware, communication protocols, embedded software, and machine learning."
-        },
-        {
-            "start":"Mar 2021",
-            "end":"Sep 2021",
-            "image": "data:image/png;base64,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",
-            "company":"UZA",
-            "position": "Internship",
-            "comment": "Individual project linked to honours programme. Data measurment and analysis of food temperature for premature babies. For data processing I used Seaborn, Pandas and Sklearn."
-        },
-        {
-            "start":"Jul 2019",
-            "end":"Sep 2019",
-            "image": "data:image/jpeg;base64,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",
-            "company":"Cuberdon Software Solutions",
-            "position": "Internship",
-            "comment": "Responsible for integrating a form analyser and speech recognition system into a website for an insurance company. Mostly worked on the back-end using Azure service APIs."
-        }
-    ],
-    "academic": [
-        {
-            "name": "meme.ir",
-            "link": "https://github.com/tdooms/meme.ir",
-            "date": "2022",
-            "description": "A group project in which we finetuned a transformer model to predict a meme template given only the text. We achieved 70% top-1 accuracy on 100 templates."
-        },
-        {
-            "name": "GNMX",
-            "link": "https://github.com/GNMX-UA/GNMX",
-            "date": "2021",
-            "description": "An interdisciplinary group project about computational biology. We developed a simulation and visualisation to investigate the genetic polymorphism phenomenon."
-        },
-        {
-            "name": "O4 Compiler",
-            "link": "https://github.com/tdooms/o4-compiler",
-            "date": "2020",
-            "description": "A fully fledged C to MIPS compiler using antlr4 and LLVM. There are several optimisation techniques which make the output quite optimised."
-        },
-        {
-            "name": "Space Invaders",
-            "link": "https://github.com/tdooms/space-invaders",
-            "date": "2019",
-            "description": "A complete retro-styled Space Invaders game with multiple space ships, stages and leaderboards written in C++ with SFML."
-        }
-    ],
-    "personal": [
-        {
-            "name": "PixelGuesser",
-            "link": "https://github.com/tdooms/pixelguesser",
-            "date": "2022",
-            "description": "PixelGuesser is a party game where players have to guess the contents of a heavily pixelated image which slowly grows more detailed over time. "
-        },
-        {
-            "name": "Ray marching renderer",
-            "link": "https://github.com/tdooms/paw",
-            "date": "2021",
-            "description": "Easy to use ray marching renderer using JSON for scene description. Many primitives, composables and textures are supported."
-        },
-        {
-            "name": "Smort home",
-            "link": "https://github.com/tdooms/smort-home",
-            "date": "2021",
-            "description": "Toy application to explore the world of home automation. It allows to control yeelight smart lights via steam or telegram messages."
-        },
-        {
-            "name": "C++ ini parser",
-            "link": "https://github.com/tdooms/ini-parser",
-            "date": "2019",
-            "description": "A Pythonic ini parser written in c++ using template hacking. The main goals are speed and ease of use. The ini file is read using a performant custom parser."
-        }
-    ],
-    "research": [
-        {
-            "name": "Transforming Diffusion",
-            "description": "Research on transformers, diffusion models and their combination. In this work we explore the transformer architecture, attempts to reduce its complexity, ways to scale them up and its use for image synthesis. Our exploration covered cutting-edge technologies such as Stable Diffusion, Imagen, eDiff-I, Reformer, Bert, GPT-3 and many others. This research was based on the Transformers United course at Stanford University (CS25).",
-            "start": "Sep 2022",
-            "end": "Jan 2023",
-            "image": "static/diffusion.png",
-            "paper": "static/diffusion_paper.pdf",
-            "presentation": "static/diffusion_ppt.pdf",
-            "source": "https://web.stanford.edu/class/cs25/"
-        },
-        {
-            "name": "Embodied Language Models",
-            "description": "In this research, we will delve into the fascinating world of Embodied Language Models. This topic is approached from a deep multi-task and meta-learning angle. We explain multi-task and meta-learning concepts and delve into their applications in the field of reinforcement learning. This foundation is then used to explain how language models can be used to enhance generalisation in robotics and allow for long-term planning. This research is based on the Deep multi-task & meta learning course at Stanford University (CS330).",
-            "start": "Feb 2023",
-            "end": "Jun 2023",
-            "footnote": "Part 2 of research project based on Stanford courses (6 ECTS credits)",
-            "image": "static/palme.png",
-            "paper": "static/embodied_paper.pdf",
-            "presentation": "static/embodied_ppt.pdf",
-            "source": "https://cs330.stanford.edu/"
-        },
-        {
-            "name": "Improving the Forward-Forward Algorithm",
-            "description": "As machine learning models become increasingly complex, they also become more difficult to train and optimize. Local learning, which focuses on updating subsets of a model's parameters at a time, has emerged as a promising technique to improve optimization and generalization. Recently, a completely novel learning algorithm, called forward-forward, has been introduced. The forward-forward algorithm has shown great potential due to its simplicity. However, its application has been limited to smaller datasets due to scalability issues. To this end, this thesis addresses the scalability limitations of the forward-forward algorithm by proposing a novel improvement termed the Trifecta.",
-            "start": "Sep 2022",
-            "end": "Jun 2023",
-            "image": "static/ff.png"
-        }
-    ]
+    "Tools & Scripting": {
+      "HTML, CSS": 4,
+      "Bash": 3,
+      "Docker, Nginx": 3,
+      "Postgres, SQLite": 4
+    }
+  },
+  "achievements": [
+    "6-time top 100 Flemish math olympiad",
+    "2nd place on collaborative math olympiad",
+    "best student award: operating systems",
+    "2-time Flemish physics olympiad semi-finalist",
+    "semi-finalist for chemistry and general sciences Flemish olympiad",
+    "3rd place in the Belgian cyber security challenge"
+  ],
+  "traits": [
+    "Eager to learn",
+    "Creative",
+    "Quick study",
+    "Detail-Oriented"
+  ],
+  "hobbies": [
+    "Cycling",
+    "Gaming",
+    "Programming",
+    "Music",
+    "Reading",
+    "Chess",
+    "VR",
+    "Cooking"
+  ],
+  "educations": [
+    {
+      "start": "Nov 2023",
+      "end": "TBD",
+      "institution": "UAntwerp",
+      "subject": "PhD in Machine Learning",
+      "image": "https://yt3.ggpht.com/ytc/AKedOLQp1LjpRZSw9NBjqUGVQ7_Sa-CBluTsI1UvVJT7XA=s900-c-k-c0x00ffffff-no-rj",
+      "topic": "(placeholder) Interpretability of Deep Neural Networks",
+      "advisor": "Prof. dr. José M. Oramas"
+    },
+    {
+      "start": "Sep 2021",
+      "end": "Jun 2023",
+      "institution": "UAntwerp",
+      "grade": "Summa Cum Laude (87%)",
+      "subject": "Master in Artificial Intelligence",
+      "image": "https://yt3.ggpht.com/ytc/AKedOLQp1LjpRZSw9NBjqUGVQ7_Sa-CBluTsI1UvVJT7XA=s900-c-k-c0x00ffffff-no-rj"
+    },
+    {
+      "start": "Sep 2019",
+      "end": "Aug 2021",
+      "institution": "UAntwerp",
+      "grade": "Summa Cum Laude (85%)",
+      "subject": "Honours programme, Sciences",
+      "image": "https://yt3.ggpht.com/ytc/AKedOLQp1LjpRZSw9NBjqUGVQ7_Sa-CBluTsI1UvVJT7XA=s900-c-k-c0x00ffffff-no-rj"
+    },
+    {
+      "start": "Sep 2018",
+      "end": "Jun 2021",
+      "institution": "UAntwerp",
+      "grade": "Magna Cum Laude (83%)",
+      "subject": "Bachelor of Computer Science",
+      "image": "https://yt3.ggpht.com/ytc/AKedOLQp1LjpRZSw9NBjqUGVQ7_Sa-CBluTsI1UvVJT7XA=s900-c-k-c0x00ffffff-no-rj"
+    }
+  ],
+  "languages": [
+    {
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1200px-Python-logo-notext.svg.png",
+      "title": "Python",
+      "sub": "6 years"
+    },
+    {
+      "image": "https://rustacean.net/assets/rustacean-flat-happy.png",
+      "title": "Rust",
+      "sub": "4 years"
+    },
+    {
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/ISO_C%2B%2B_Logo.svg/1822px-ISO_C%2B%2B_Logo.svg.png",
+      "title": "C++",
+      "sub": "3 years"
+    },
+    {
+      "image": "https://cdn-icons-png.flaticon.com/512/5968/5968282.png",
+      "title": "Java",
+      "sub": "2 years"
+    },
+    {
+      "image": "https://upload.wikimedia.org/wikipedia/commons/3/3b/Javascript_Logo.png",
+      "title": "JavaScript",
+      "sub": "6 months"
+    },
+    {
+      "image": "https://camo.githubusercontent.com/8d56e87edf99e89bfc457cd62462e0b7aae19e6b197b1df5c542d474d8d76f81/68747470733a2f2f646576656c6f7065722e6665646f726170726f6a6563742e6f72672f7374617469632f6c6f676f2f6373686172702e706e67",
+      "title": "C#",
+      "sub": "3 months"
+    },
+    {
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/R_logo.svg/2560px-R_logo.svg.png",
+      "title": "R",
+      "sub": "2 months"
+    },
+    {
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSa_8amPlPc3XKJiz7UEWQNUJwlscGwzyLvUKq15Dgef64NCCApvmDnBaKqj1XCDq7tLSg&usqp=CAU",
+      "title": "Julia",
+      "sub": "1 month"
+    }
+  ],
+  "trajectory": [
+    "During my studies, I have worked on several projects in a professional context.",
+    "These have been in various fields outside my expertise, each time I adapted quickly and learned a lot."
+  ],
+  "evolution": [
+    "In 2016, I began programming with Processing, creating physics simulations and games. ",
+    "During university, I transitioned to C++ and became very proficient in the language.",
+    "Intrigued by Rust, I explored it for personal projects and fell in love with the language.",
+    "Currently, I primarily work with Python for deep learning and data science."
+  ],
+  "explanation": [
+    "During my master's degree, I opted for as many reseach projects as possible. The first two highlighted projects are in collaboration with a fellow student Alexander Belooussov, and are each worth 6 ECTS.",
+    "These projects involved following a Stanford course, conducting research on a related topic, writing survey paper, and give a lecture to PhD students and professors within UAntwerp.",
+    "Further, for my thesis I investigated the Forward-Forward algorith, under supervision of José Oramas. "
+  ],
+  "experiences": [
+    {
+      "start": "Jul 2022",
+      "end": "Sep 2022",
+      "image": "data:image/jpeg;base64,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",
+      "company": "Cuberdon Software Solutions",
+      "position": "Internship",
+      "comment": "Involved with the groundwork for a next-generation customer portal with professional dashboards, dynamic news and document organisation. Full-stack development with Vue, ASP.NET and SQL."
+    },
+    {
+      "start": "Sep 2021",
+      "end": "Jun 2022",
+      "company": "Keysight Technologies",
+      "image": "https://uploads.magnetme-images.com/82e3d34dda5e8f00277a3f50dbcd1e18?auto=format&bg=white&fit=fill&h=250&w=250",
+      "position": "Internship",
+      "comment": "Research project for analyzing, and predicting the power consumption on embedded devices. This research required knowledge of hardware, communication protocols, embedded software, and machine learning."
+    },
+    {
+      "start": "Mar 2021",
+      "end": "Sep 2021",
+      "image": "data:image/png;base64,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",
+      "company": "UZA",
+      "position": "Internship",
+      "comment": "Individual project linked to honours programme. Data measurment and analysis of food temperature for premature babies. For data processing I used Seaborn, Pandas and Sklearn."
+    },
+    {
+      "start": "Jul 2019",
+      "end": "Sep 2019",
+      "image": "data:image/jpeg;base64,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",
+      "company": "Cuberdon Software Solutions",
+      "position": "Internship",
+      "comment": "Responsible for integrating a form analyser and speech recognition system into a website for an insurance company. Mostly worked on the back-end using Azure service APIs."
+    }
+  ],
+  "academic": [
+    {
+      "name": "meme.ir",
+      "link": "https://github.com/tdooms/meme.ir",
+      "date": "2022",
+      "description": "A group project in which we finetuned a transformer model to predict a meme template given only the text. We achieved 70% top-1 accuracy on 100 templates."
+    },
+    {
+      "name": "GNMX",
+      "link": "https://github.com/GNMX-UA/GNMX",
+      "date": "2021",
+      "description": "An interdisciplinary group project about computational biology. We developed a simulation and visualisation to investigate the genetic polymorphism phenomenon."
+    },
+    {
+      "name": "O4 Compiler",
+      "link": "https://github.com/tdooms/o4-compiler",
+      "date": "2020",
+      "description": "A fully fledged C to MIPS compiler using antlr4 and LLVM. There are several optimisation techniques which make the output quite optimised."
+    },
+    {
+      "name": "Space Invaders",
+      "link": "https://github.com/tdooms/space-invaders",
+      "date": "2019",
+      "description": "A complete retro-styled Space Invaders game with multiple space ships, stages and leaderboards written in C++ with SFML."
+    }
+  ],
+  "personal": [
+    {
+      "name": "PixelGuesser",
+      "link": "https://github.com/tdooms/pixelguesser",
+      "date": "2022",
+      "description": "PixelGuesser is a party game where players have to guess the contents of a heavily pixelated image which slowly grows more detailed over time. "
+    },
+    {
+      "name": "Ray marching renderer",
+      "link": "https://github.com/tdooms/paw",
+      "date": "2021",
+      "description": "Easy to use ray marching renderer using JSON for scene description. Many primitives, composables and textures are supported."
+    },
+    {
+      "name": "Smort home",
+      "link": "https://github.com/tdooms/smort-home",
+      "date": "2021",
+      "description": "Toy application to explore the world of home automation. It allows to control yeelight smart lights via steam or telegram messages."
+    },
+    {
+      "name": "C++ ini parser",
+      "link": "https://github.com/tdooms/ini-parser",
+      "date": "2019",
+      "description": "A Pythonic ini parser written in c++ using template hacking. The main goals are speed and ease of use. The ini file is read using a performant custom parser."
+    }
+  ],
+  "research": [
+    {
+      "name": "Transforming Diffusion",
+      "kind": "Survey paper",
+      "description": "Research on transformers, diffusion models and their combination. In this work we explore the transformer architecture, attempts to reduce its complexity, ways to scale them up and its use for image synthesis. Our exploration covered cutting-edge technologies such as Stable Diffusion, Imagen, eDiff-I, Reformer, Bert, GPT-3 and many others. This research was based on the Transformers United course at Stanford University (CS25).",
+      "start": "Sep 2022",
+      "end": "Jan 2023",
+      "image": "static/diffusion.png",
+      "paper": "static/diffusion_paper.pdf",
+      "presentation": "static/diffusion_ppt.pdf",
+      "source": "https://web.stanford.edu/class/cs25/"
+    },
+    {
+      "name": "Embodied Language Models",
+      "kind": "Survey paper",
+      "description": "In this research project, we will delve into the world of Embodied Language Models. This topic is approached from a deep multi-task and meta-learning angle. We explain multi-task and meta-learning concepts and delve into their applications in the field of reinforcement learning. This foundation is then used to explain how language models can be used to enhance generalisation in robotics and allow for long-term planning. This research is based on the Deep multi-task & meta learning course at Stanford University (CS330).",
+      "start": "Feb 2023",
+      "end": "Jun 2023",
+      "footnote": "Part 2 of research project based on Stanford courses (6 ECTS credits)",
+      "image": "static/palme.png",
+      "paper": "static/embodied_paper.pdf",
+      "presentation": "static/embodied_ppt.pdf",
+      "source": "https://cs330.stanford.edu/"
+    },
+    {
+      "name": "Improving the Forward-Forward Algorithm",
+      "kind": "Thesis",
+      "description": "As machine learning models become increasingly complex, they also become more difficult to train and optimize. Local learning, which focuses on updating subsets of a model's parameters at a time, has emerged as a promising technique to improve optimization and generalization. Recently, a completely novel learning algorithm, called forward-forward, has been introduced. The forward-forward algorithm has shown great potential due to its simplicity. However, its application has been limited to smaller datasets due to scalability issues. To this end, this thesis addresses the scalability limitations of the forward-forward algorithm by proposing a novel improvement termed the Trifecta.",
+      "start": "Sep 2022",
+      "end": "Jun 2023",
+      "image": "static/ff.png",
+      "paper": "https://arxiv.org/abs/2311.18130",
+      "presentation": "static/thesis_ppt.pdf"
+    }
+  ]
 }

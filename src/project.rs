@@ -1,20 +1,26 @@
 use cobul::*;
 use yew::*;
-use cobul::fa::Brands;
+use cobul::icons::Brands;
+use implicit_clone::{ImplicitClone, unsync::IString};
 
 #[derive(serde::Deserialize, Properties, PartialEq, Clone, Debug)]
 pub struct ProjectData {
-    pub name: &'static str,
-    pub link: &'static str,
-    pub date: &'static str,
-    pub description: &'static str,
+    pub name: IString,
+    pub link: IString,
+    pub date: IString,
+    pub description: IString,
 }
+
+impl ImplicitClone for ProjectData {}
 
 #[function_component(Project)]
 pub fn project(props: &ProjectData) -> Html {
-    let onclick = Callback::from(|_| {
-        web_sys::window().unwrap().open_with_url(props.link).unwrap();
+    let link = props.link.clone();
+
+    let onclick = Callback::from(move |_| {
+        web_sys::window().unwrap().open_with_url(&link).unwrap();
     });
+
     let icon = html! { <Icon icon={Brands::Github} size={Size::Large} />};
 
     html! {
@@ -22,10 +28,10 @@ pub fn project(props: &ProjectData) -> Html {
         <Card class="my-project-item">
         <Content>
             <Media left={icon}>
-            <Title size={HeaderSize::Is4}> {props.name} </Title>
-            <Subtitle size={HeaderSize::Is6}> {props.date} </Subtitle>
+            <Title size={HeaderSize::Is4}> {props.name.clone()} </Title>
+            <Subtitle size={HeaderSize::Is6}> {props.date.clone()} </Subtitle>
             </Media>
-            <span>{props.description}</span>
+            <span>{props.description.clone()}</span>
         </Content>
         </Card>
         </div>

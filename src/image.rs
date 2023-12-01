@@ -1,5 +1,6 @@
 use yew::prelude::*;
 use strum::Display;
+use implicit_clone::unsync::IString;
 
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum Height {
@@ -16,10 +17,10 @@ impl Default for Height {
 #[derive(Clone, Debug, Properties, PartialEq)]
 pub struct Props {
     #[prop_or_default]
-    pub src: Option<AttrValue>,
+    pub src: Option<IString>,
 
     #[prop_or_default]
-    pub placeholder: Option<AttrValue>,
+    pub placeholder: Option<IString>,
 
     #[prop_or_default]
     pub height: Height,
