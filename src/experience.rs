@@ -20,6 +20,7 @@ impl ImplicitClone for ExperienceData {}
 #[function_component(Experience)]
 pub fn experience(props: &ExperienceData) -> Html {
     let image = html! {<Image size={ImageSize::Is48x48} src={props.image.clone()} class="m-0"/>};
+
     html! {
         <Block>
         <Card>
@@ -29,7 +30,7 @@ pub fn experience(props: &ExperienceData) -> Html {
             <Subtitle size={HeaderSize::Is6}> {props.start.clone()} {" - "} {props.end.clone()} </Subtitle>
             </Media>
             // <Title size={HeaderSize::Is5}> {props.position} </Title>
-            <span>{props.comment.clone()}</span>
+            <span> {props.comment.clone()} </span>
         </Content>
         </Card>
         </Block>

@@ -2,6 +2,7 @@ use cobul::*;
 use yew::*;
 use cobul::icons::Brands;
 use implicit_clone::{ImplicitClone, unsync::IString};
+use crate::util::redirect;
 
 #[derive(serde::Deserialize, Properties, PartialEq, Clone, Debug)]
 pub struct ProjectData {
@@ -15,12 +16,7 @@ impl ImplicitClone for ProjectData {}
 
 #[function_component(Project)]
 pub fn project(props: &ProjectData) -> Html {
-    let link = props.link.clone();
-
-    let onclick = Callback::from(move |_| {
-        web_sys::window().unwrap().open_with_url(&link).unwrap();
-    });
-
+    let onclick = redirect(props.link.clone()).reform(|_| ());
     let icon = html! { <Icon icon={Brands::Github} size={Size::Large} />};
 
     html! {

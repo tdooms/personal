@@ -9,6 +9,7 @@ mod research;
 mod contact;
 mod image;
 mod profile;
+mod util;
 
 use achievement::*;
 use education::*;

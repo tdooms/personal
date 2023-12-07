@@ -18,24 +18,24 @@ pub struct EducationData {
 
 impl ImplicitClone for EducationData {}
 
+
+#[derive(Properties, PartialEq, Clone, Debug)]
+struct ItemProps {
+    pub name: IString,
+    pub value: Option<IString>
+}
+
+#[function_component(Item)]
+fn item(props: &ItemProps) -> Html {
+    match props.value.clone() {
+        Some(value) => html! {<p class="mb-1"><b> {props.name.clone()} {": "}</b> {value}</p>},
+        None => html! {},
+    }
+}
+
 #[function_component(Education)]
 pub fn education(props: &EducationData) -> Html {
-    let image = html! {<Image size={ImageSize::Is48x48} src={props.image.clone()} class="m-0"/>};
-
-    let grade = match props.grade.clone() {
-        Some(grade) => html! {<p class="mb-1"><b> {"Grade: "}</b> {grade}</p>},
-        None => html! {},
-    };
-
-    let topic = match props.topic.clone() {
-        Some(topic) => html! {<p class="mb-1"><b> {"Topic: "}</b> {topic}</p>},
-        None => html! {},
-    };
-
-    let advisor = match props.advisor.clone() {
-        Some(advisor) => html! {<p class="mb-1"><b> {"Advisor: "}</b> {advisor}</p>},
-        None => html! {},
-    };
+    let image = html! { <Image size={ImageSize::Is48x48} src={props.image.clone()} class="m-0"/> };
 
     html! {
         <Block>
@@ -46,9 +46,9 @@ pub fn education(props: &EducationData) -> Html {
             <Subtitle size={HeaderSize::Is6}> {props.start.clone()} {" - "} {props.end.clone()} </Subtitle>
             </Media>
             <Title size={HeaderSize::Is5} class="mb-3"> {props.subject.clone()} </Title>
-            {topic}
-            {advisor}
-            {grade}
+            <Item name="Topic" value={props.topic.clone()} />
+            <Item name="Advisor" value={props.advisor.clone()} />
+            <Item name="Grade" value={props.grade.clone()} />
         </Content>
         </Card>
         </Block>
