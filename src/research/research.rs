@@ -5,6 +5,13 @@ use implicit_clone::{ImplicitClone, unsync::IString};
 use crate::image::Height;
 use crate::util::redirect;
 
+#[derive(Properties, PartialEq, Clone, Debug)]
+struct ReferenceProps {
+    url: Option<IString>,
+    text: IString,
+    icon: Option<IString>,
+}
+
 #[derive(serde::Deserialize, Properties, PartialEq, Clone, Debug)]
 pub struct ResearchData {
     pub name: IString,
@@ -19,14 +26,12 @@ pub struct ResearchData {
     pub presentation: Option<IString>,
 }
 
-impl ImplicitClone for ResearchData {}
-
-#[derive(Properties, PartialEq, Clone, Debug)]
-pub struct ReferenceProps {
-    url: Option<IString>,
-    text: IString,
-    icon: Option<IString>,
+#[derive(serde::Deserialize, Properties, PartialEq, Clone, Debug)]
+pub struct Props {
+    pub research: IArray<ResearchData>,
 }
+
+impl ImplicitClone for ResearchData {}
 
 #[function_component(Reference)]
 fn reference(props: &ReferenceProps) -> Html {
@@ -40,8 +45,8 @@ fn reference(props: &ReferenceProps) -> Html {
     }
 }
 
-#[function_component(Research)]
-pub fn research(props: &ResearchData) -> Html {
+#[function_component(Topic)]
+fn topic(props: &ResearchData) -> Html {
     html! {
         <Columns>
         <Column size={ColumnSize::Is3}>
@@ -62,4 +67,9 @@ pub fn research(props: &ResearchData) -> Html {
         </Column>
         </Columns>
     }
+}
+
+#[function_component(Research)]
+pub fn research(props: &Props) -> Html {
+    html! { for props.iter().map(|data| html! {<Topic ..data />}) }
 }

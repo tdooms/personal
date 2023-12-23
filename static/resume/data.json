@@ -1,22 +1,4 @@
 {
-  "profile": {
-    "name": "Thomas Dooms",
-    "location": "Antwerp, Belgium",
-    "profession": "Machine Learning Researcher",
-    "picture": "static/profile.jpg"
-  },
-  "introduction": [
-    "I am an aspiring doctoral student in machine learning at the University of Antwerp. My field of study will be about interpretability of deep neural networks. ",
-    "I like keeping up with the machine learning state of the art and using this knowledge to develop fun projects.",
-    "My areas of expertise are local learning algorithms, representation learning, diffusion models and language models."
-  ],
-  "contact": {
-    "email": "thomas@dooms.eu",
-    "phone": "+32 478 52 34 43",
-    "address": "Karel Rogierstraat, Antwerpen",
-    "linkedin": "https://www.linkedin.com/in/thomas-dooms-5518a4169/",
-    "github": "https://github.com/tdooms"
-  },
   "skills": {
     "Data Science": {
       "PyTorch, Lightning": 5,
@@ -39,7 +21,7 @@
       "Postgres, SQLite": 4
     }
   },
-  "achievements": [
+  "awards": [
     "6-time top 100 Flemish math olympiad",
     "2nd place on collaborative math olympiad",
     "best student award: operating systems",
@@ -58,17 +40,16 @@
     "Gaming",
     "Programming",
     "Music",
-    "Reading",
     "Chess",
     "VR",
     "Cooking"
   ],
-  "educations": [
+  "education": [
     {
       "start": "Nov 2023",
       "end": "TBD",
       "institution": "UAntwerp",
-      "subject": "PhD in Machine Learning",
+      "title": "PhD in Machine Learning",
       "image": "https://yt3.ggpht.com/ytc/AKedOLQp1LjpRZSw9NBjqUGVQ7_Sa-CBluTsI1UvVJT7XA=s900-c-k-c0x00ffffff-no-rj",
       "topic": "(placeholder) Interpretability of Deep Neural Networks",
       "advisor": "Prof. dr. José M. Oramas"
@@ -78,7 +59,7 @@
       "end": "Jun 2023",
       "institution": "UAntwerp",
       "grade": "Summa Cum Laude (87%)",
-      "subject": "Master in Artificial Intelligence",
+      "title": "Master in Artificial Intelligence",
       "image": "https://yt3.ggpht.com/ytc/AKedOLQp1LjpRZSw9NBjqUGVQ7_Sa-CBluTsI1UvVJT7XA=s900-c-k-c0x00ffffff-no-rj"
     },
     {
@@ -86,7 +67,7 @@
       "end": "Aug 2021",
       "institution": "UAntwerp",
       "grade": "Summa Cum Laude (85%)",
-      "subject": "Honours programme, Sciences",
+      "title": "Honours programme, Sciences",
       "image": "https://yt3.ggpht.com/ytc/AKedOLQp1LjpRZSw9NBjqUGVQ7_Sa-CBluTsI1UvVJT7XA=s900-c-k-c0x00ffffff-no-rj"
     },
     {
@@ -94,11 +75,38 @@
       "end": "Jun 2021",
       "institution": "UAntwerp",
       "grade": "Magna Cum Laude (83%)",
-      "subject": "Bachelor of Computer Science",
+      "title": "Bachelor of Computer Science",
       "image": "https://yt3.ggpht.com/ytc/AKedOLQp1LjpRZSw9NBjqUGVQ7_Sa-CBluTsI1UvVJT7XA=s900-c-k-c0x00ffffff-no-rj"
     }
   ],
   "languages": [
+    {
+      "name": "Dutch",
+      "level": "Native",
+      "value": 100
+    },
+    {
+      "name": "French",
+      "level": "Bilingual",
+      "value": 90
+    },
+    {
+      "name": "English",
+      "level": "Proficient",
+      "value": 90
+    },
+    {
+      "name": "Spanish",
+      "level": "Basic",
+      "value": 30
+    },
+    {
+      "name": "German",
+      "level": "Basic",
+      "value": 20
+    }
+  ],
+  "programming": [
     {
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1200px-Python-logo-notext.svg.png",
       "title": "Python",
@@ -128,34 +136,9 @@
       "image": "https://camo.githubusercontent.com/8d56e87edf99e89bfc457cd62462e0b7aae19e6b197b1df5c542d474d8d76f81/68747470733a2f2f646576656c6f7065722e6665646f726170726f6a6563742e6f72672f7374617469632f6c6f676f2f6373686172702e706e67",
       "title": "C#",
       "sub": "3 months"
-    },
-    {
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/R_logo.svg/2560px-R_logo.svg.png",
-      "title": "R",
-      "sub": "2 months"
-    },
-    {
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSa_8amPlPc3XKJiz7UEWQNUJwlscGwzyLvUKq15Dgef64NCCApvmDnBaKqj1XCDq7tLSg&usqp=CAU",
-      "title": "Julia",
-      "sub": "1 month"
     }
   ],
-  "trajectory": [
-    "During my studies, I have worked on several projects in a professional context.",
-    "These have been in various fields outside my expertise, each time I adapted quickly and learned a lot."
-  ],
-  "evolution": [
-    "In 2016, I began programming with Processing, creating physics simulations and games. ",
-    "During university, I transitioned to C++ and became very proficient in the language.",
-    "Intrigued by Rust, I explored it for personal projects and fell in love with the language.",
-    "Currently, I primarily work with Python for deep learning and data science."
-  ],
-  "explanation": [
-    "During my master's degree, I opted for as many reseach projects as possible. The first two highlighted projects are in collaboration with a fellow student Alexander Belooussov, and are each worth 6 ECTS.",
-    "These projects involved following a Stanford course, conducting research on a related topic, writing survey paper, and give a lecture to PhD students and professors within UAntwerp.",
-    "Further, for my thesis I investigated the Forward-Forward algorith, under supervision of José Oramas. "
-  ],
-  "experiences": [
+  "experience": [
     {
       "start": "Jul 2022",
       "end": "Sep 2022",
@@ -207,12 +190,6 @@
       "link": "https://github.com/tdooms/o4-compiler",
       "date": "2020",
       "description": "A fully fledged C to MIPS compiler using antlr4 and LLVM. There are several optimisation techniques which make the output quite optimised."
-    },
-    {
-      "name": "Space Invaders",
-      "link": "https://github.com/tdooms/space-invaders",
-      "date": "2019",
-      "description": "A complete retro-styled Space Invaders game with multiple space ships, stages and leaderboards written in C++ with SFML."
     }
   ],
   "personal": [
@@ -229,51 +206,10 @@
       "description": "Easy to use ray marching renderer using JSON for scene description. Many primitives, composables and textures are supported."
     },
     {
-      "name": "Smort home",
-      "link": "https://github.com/tdooms/smort-home",
-      "date": "2021",
-      "description": "Toy application to explore the world of home automation. It allows to control yeelight smart lights via steam or telegram messages."
-    },
-    {
       "name": "C++ ini parser",
       "link": "https://github.com/tdooms/ini-parser",
       "date": "2019",
       "description": "A Pythonic ini parser written in c++ using template hacking. The main goals are speed and ease of use. The ini file is read using a performant custom parser."
-    }
-  ],
-  "research": [
-    {
-      "name": "Transforming Diffusion",
-      "kind": "Survey paper",
-      "description": "Research on transformers, diffusion models and their combination. In this work we explore the transformer architecture, attempts to reduce its complexity, ways to scale them up and its use for image synthesis. Our exploration covered cutting-edge technologies such as Stable Diffusion, Imagen, eDiff-I, Reformer, Bert, GPT-3 and many others. This research was based on the Transformers United course at Stanford University (CS25).",
-      "start": "Sep 2022",
-      "end": "Jan 2023",
-      "image": "static/diffusion.png",
-      "paper": "static/diffusion_paper.pdf",
-      "presentation": "static/diffusion_ppt.pdf",
-      "source": "https://web.stanford.edu/class/cs25/"
-    },
-    {
-      "name": "Embodied Language Models",
-      "kind": "Survey paper",
-      "description": "In this research project, we will delve into the world of Embodied Language Models. This topic is approached from a deep multi-task and meta-learning angle. We explain multi-task and meta-learning concepts and delve into their applications in the field of reinforcement learning. This foundation is then used to explain how language models can be used to enhance generalisation in robotics and allow for long-term planning. This research is based on the Deep multi-task & meta learning course at Stanford University (CS330).",
-      "start": "Feb 2023",
-      "end": "Jun 2023",
-      "footnote": "Part 2 of research project based on Stanford courses (6 ECTS credits)",
-      "image": "static/palme.png",
-      "paper": "static/embodied_paper.pdf",
-      "presentation": "static/embodied_ppt.pdf",
-      "source": "https://cs330.stanford.edu/"
-    },
-    {
-      "name": "Improving the Forward-Forward Algorithm",
-      "kind": "Thesis",
-      "description": "As machine learning models become increasingly complex, they also become more difficult to train and optimize. Local learning, which focuses on updating subsets of a model's parameters at a time, has emerged as a promising technique to improve optimization and generalization. Recently, a completely novel learning algorithm, called forward-forward, has been introduced. The forward-forward algorithm has shown great potential due to its simplicity. However, its application has been limited to smaller datasets due to scalability issues. To this end, this thesis addresses the scalability limitations of the forward-forward algorithm by proposing a novel improvement termed the Trifecta.",
-      "start": "Sep 2022",
-      "end": "Jun 2023",
-      "image": "static/ff.png",
-      "paper": "https://arxiv.org/abs/2311.18130",
-      "presentation": "static/thesis_ppt.pdf"
     }
   ]
 }

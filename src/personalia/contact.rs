@@ -7,7 +7,6 @@ use yew::*;
 pub struct ContactData {
     email: IString,
     phone: IString,
-    address: IString,
     linkedin: IString,
     github: IString,
 }
@@ -24,10 +23,10 @@ pub fn contact(props: &ContactData) -> Html {
             <Icon icon={Solid::Phone} color={TextColor::Danger} />
             <span> {" "}{props.phone.clone()} </span>
         </Block>
-        <Block>
-            <Icon icon={Solid::MapLocation} color={TextColor::Danger} />
-            <span> {" "}{props.address.clone()} </span>
-        </Block>
+        // <Block>
+        //     <Icon icon={Solid::MapLocation} color={TextColor::Danger} />
+        //     <span> {" "}{props.address.clone()} </span>
+        // </Block>
         <Block>
             <Icon icon={Brands::Linkedin} color={TextColor::Danger} />
             <span> <a href={props.linkedin.clone()}> {" "}{"LinkedIn"} </a> </span>

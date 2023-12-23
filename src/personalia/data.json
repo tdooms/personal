@@ -1,0 +1,19 @@
+{
+  "profile": {
+    "name": "Thomas Dooms",
+    "location": "Antwerp, Belgium",
+    "profession": "Machine Learning Researcher",
+    "picture": "static/profile.jpg"
+  },
+  "contact": {
+    "email": "thomas@dooms.eu",
+    "phone": "+32 478 52 34 43",
+    "linkedin": "https://www.linkedin.com/in/thomas-dooms-5518a4169/",
+    "github": "https://github.com/tdooms"
+  },
+  "about": [
+    "I am an aspiring doctoral student in machine learning at the University of Antwerp. My field of study will be about interpretability of deep neural networks. ",
+    "I like keeping up with the machine learning state of the art and using this knowledge to develop fun projects.",
+    "My areas of expertise are local learning algorithms, representation learning, diffusion models and language models."
+  ]
+}

@@ -5,14 +5,14 @@ use implicit_clone::{unsync::IString};
 
 #[derive(Deserialize, Properties, PartialEq, Clone, Debug)]
 pub struct ProfileData {
-    name: IString,
-    location: IString,
-    profession: IString,
-    picture: IString,
+    pub name: AttrValue,
+    pub location: IString,
+    pub profession: IString,
+    pub picture: IString,
 }
 
 #[function_component(Profile)]
-pub fn profile(props: &ProfileData) -> Html{
+pub fn profile(props: &ProfileData) -> Html {
     let ProfileData {name, location, profession, picture} = props.clone();
 
     html! {
