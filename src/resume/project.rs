@@ -1,23 +1,24 @@
 use cobul::*;
 use yew::*;
 use cobul::icons::Brands;
-use implicit_clone::{ImplicitClone, unsync::IString, unsync::IArray};
-use crate::resume::CvProps;
+use implicit_clone::{ImplicitClone};
 use crate::util::redirect;
+
+use super::ResumeData;
 
 #[derive(serde::Deserialize, Properties, PartialEq, Clone, Debug)]
 pub struct ProjectData {
-    pub name: IString,
-    pub link: IString,
-    pub date: IString,
-    pub description: IString,
+    pub name: AttrValue,
+    pub link: AttrValue,
+    pub date: AttrValue,
+    pub description: AttrValue,
 }
 
-#[derive(serde::Deserialize, Properties, PartialEq, Clone, Debug)]
-pub struct Props {
-    pub title: IString,
-    pub projects: IArray<ProjectData>,
-}
+// #[derive(serde::Deserialize, Properties, PartialEq, Clone, Debug)]
+// pub struct Props {
+//     pub title: AttrValue,
+//     pub projects: IArray<ProjectData>,
+// }
 
 impl ImplicitClone for ProjectData {}
 
@@ -42,21 +43,21 @@ pub fn item(props: &ProjectData) -> Html {
 }
 
 #[function_component(Personal)]
-pub fn personal(CvProps{cv}: &CvProps) -> Html {
+pub fn personal(resume: &ResumeData) -> Html {
     html! {
         <>
         <Title size={HeaderSize::Is4} class="mb-3"> {"Personal Projects"} </Title>
-        { for cv.personal.iter().map(|data| html! {<Item ..data />}) }
+        { for resume.personal.iter().map(|data| html! {<Item ..data />}) }
         </>
     }
 }
 
 #[function_component(Academic)]
-pub fn academic(CvProps{cv}: &CvProps) -> Html {
+pub fn academic(resume: &ResumeData) -> Html {
     html! {
         <>
         <Title size={HeaderSize::Is4} class="mb-3"> {"Academic Projects"} </Title>
-        { for cv.academic.iter().map(|data| html! {<Item ..data />}) }
+        { for resume.academic.iter().map(|data| html! {<Item ..data />}) }
         </>
     }
 }

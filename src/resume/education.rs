@@ -1,27 +1,28 @@
 use cobul::*;
 use yew::*;
-use implicit_clone::{ImplicitClone, unsync::IString};
-use implicit_clone::unsync::IArray;
-use crate::resume::CvProps;
+use implicit_clone::ImplicitClone;
+
+
+use super::ResumeData;
 
 #[derive(serde::Deserialize, Properties, PartialEq, Clone, Debug)]
 pub struct EducationData {
-    pub image: IString,
+    pub image: AttrValue,
 
-    pub start: IString,
-    pub end: IString,
+    pub start: AttrValue,
+    pub end: AttrValue,
 
-    pub institution: IString,
-    pub title: IString,
+    pub institution: AttrValue,
+    pub title: AttrValue,
 
-    pub grade: Option<IString>,
-    pub advisor: Option<IString>,
+    pub grade: Option<AttrValue>,
+    pub advisor: Option<AttrValue>,
 }
 
-#[derive(Properties, PartialEq, Clone, Debug)]
-pub struct Props {
-    pub education: IArray<EducationData>,
-}
+// #[derive(Properties, PartialEq, Clone, Debug)]
+// pub struct Props {
+//     pub education: IArray<EducationData>,
+// }
 
 impl ImplicitClone for EducationData {}
 
@@ -29,7 +30,7 @@ impl ImplicitClone for EducationData {}
 fn item(props: &EducationData) -> Html {
     let image = html! { <Image size={ImageSize::Is48x48} src={props.image.clone()} class="m-0"/> };
 
-    let kv = |name: &str, value: Option<IString>| match value {
+    let kv = |name: &str, value: Option<AttrValue>| match value {
         Some(value) => html! {<p class="mb-1"><b> {name} {": "}</b> {value}</p>},
         None => html! {},
     };
@@ -52,11 +53,11 @@ fn item(props: &EducationData) -> Html {
 }
 
 #[function_component(Education)]
-pub fn education(CvProps{cv}: &CvProps) -> Html {
+pub fn education(resume: &ResumeData) -> Html {
     html! {
         <>
         <Title size={HeaderSize::Is4} class="mb-3"> {"Education"} </Title>
-        { for cv.education.iter().map(|data| html! {<Item ..data />}) }
+        { for resume.education.iter().map(|data| html! {<Item ..data />}) }
         </>
     }
 }

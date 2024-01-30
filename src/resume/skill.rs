@@ -1,18 +1,19 @@
-use implicit_clone::unsync::{IMap, IString};
+use implicit_clone::unsync::{IMap};
 use cobul::*;
 use yew::*;
-use crate::resume::CvProps;
+
+use super::ResumeData;
 
 #[derive(Properties, PartialEq, Clone, Debug)]
 struct SkillData {
-    pub name: IString,
+    pub name: AttrValue,
     pub level: u32,
 }
 
 #[derive(Properties, PartialEq, Clone, Debug)]
 struct FieldData {
-    pub skills: IMap<IString, u32>,
-    pub field: IString
+    pub skills: IMap<AttrValue, u32>,
+    pub field: AttrValue
 }
 
 #[function_component(Item)]
@@ -42,11 +43,11 @@ fn field(props: &FieldData) -> Html {
 }
 
 #[function_component(Skills)]
-pub fn skills(CvProps{cv}: &CvProps) -> Html {
+pub fn skills(resume: &ResumeData) -> Html {
     html! {
         <>
         // <Title size={HeaderSize::Is4} class="mb-3"> {"Skills"} </Title>
-        { for cv.skills.iter().map(|(field, skills)| html! {<Field {field} {skills} />}) }
+        { for resume.skills.iter().map(|(field, skills)| html! {<Field {field} {skills} />}) }
         </>
     }
 }

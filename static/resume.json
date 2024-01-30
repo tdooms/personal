@@ -1,0 +1,215 @@
+{
+  "skills": {
+    "Data Science": {
+      "PyTorch, Lightning": 5,
+      "Weights & Biases": 4,
+      "Plotly, Seaborn": 4,
+      "Numpy, Pandas, Scipy": 4,
+      "Candle": 4,
+      "Huggingface": 3
+    },
+    "Frameworks": {
+      "Yew": 5,
+      "Flask, Django": 4,
+      "Rocket, Axum": 4,
+      "Bevy": 4
+    },
+    "Tools & Scripting": {
+      "HTML, CSS": 4,
+      "Bash": 3,
+      "Docker, Nginx": 3,
+      "Postgres, SQLite": 4
+    }
+  },
+  "awards": [
+    "6-time top 100 Flemish math olympiad",
+    "2nd place on collaborative math olympiad",
+    "best student award: operating systems",
+    "2-time Flemish physics olympiad semi-finalist",
+    "semi-finalist for chemistry and general sciences Flemish olympiad",
+    "3rd place in the Belgian cyber security challenge"
+  ],
+  "traits": [
+    "Eager to learn",
+    "Creative",
+    "Quick study",
+    "Detail-Oriented"
+  ],
+  "hobbies": [
+    "Cycling",
+    "Gaming",
+    "Programming",
+    "Music",
+    "Chess",
+    "VR",
+    "Cooking"
+  ],
+  "education": [
+    {
+      "start": "Nov 2023",
+      "end": "TBD",
+      "institution": "UAntwerp",
+      "title": "PhD in Machine Learning",
+      "image": "static/resume/ua.jpg",
+      "topic": "(placeholder) Interpretability of Deep Neural Networks",
+      "advisor": "Prof. dr. José M. Oramas"
+    },
+    {
+      "start": "Sep 2021",
+      "end": "Jun 2023",
+      "institution": "UAntwerp",
+      "grade": "Summa Cum Laude (87%)",
+      "title": "Master in Artificial Intelligence",
+      "image": "static/resume/ua.jpg"
+    },
+    {
+      "start": "Sep 2019",
+      "end": "Aug 2021",
+      "institution": "UAntwerp",
+      "grade": "Summa Cum Laude (85%)",
+      "title": "Honours programme, Sciences",
+      "image": "static/resume/ua.jpg"
+    },
+    {
+      "start": "Sep 2018",
+      "end": "Jun 2021",
+      "institution": "UAntwerp",
+      "grade": "Magna Cum Laude (83%)",
+      "title": "Bachelor of Computer Science",
+      "image": "static/resume/ua.jpg"
+    }
+  ],
+  "languages": [
+    {
+      "name": "Dutch",
+      "level": "Native",
+      "value": 100
+    },
+    {
+      "name": "French",
+      "level": "Bilingual",
+      "value": 90
+    },
+    {
+      "name": "English",
+      "level": "Proficient",
+      "value": 90
+    },
+    {
+      "name": "Spanish",
+      "level": "Basic",
+      "value": 30
+    },
+    {
+      "name": "German",
+      "level": "Basic",
+      "value": 20
+    }
+  ],
+  "programming": [
+    {
+      "image": "static/resume/python.png",
+      "title": "Python",
+      "sub": "6 years"
+    },
+    {
+      "image": "static/resume/rust.jpg",
+      "title": "Rust",
+      "sub": "4 years"
+    },
+    {
+      "image": "static/resume/cpp.png",
+      "title": "C++",
+      "sub": "3 years"
+    },
+    {
+      "image": "static/resume/java.png",
+      "title": "Java",
+      "sub": "2 years"
+    },
+    {
+      "image": "static/resume/js.png",
+      "title": "JavaScript",
+      "sub": "6 months"
+    },
+    {
+      "image": "static/resume/csharp.jpeg",
+      "title": "C#",
+      "sub": "3 months"
+    }
+  ],
+  "experience": [
+    {
+      "start": "Jul 2022",
+      "end": "Sep 2022",
+      "image": "static/resume/cuberdon.jpeg",
+      "company": "Cuberdon Software Solutions",
+      "position": "Internship",
+      "comment": "Involved with the groundwork for a next-generation customer portal with professional dashboards, dynamic news and document organisation. Full-stack development with Vue, ASP.NET and SQL."
+    },
+    {
+      "start": "Sep 2021",
+      "end": "Jun 2022",
+      "company": "Keysight Technologies",
+      "image": "static/resume/keysight.avif",
+      "position": "Internship",
+      "comment": "Research project for analyzing, and predicting the power consumption on embedded devices. This research required knowledge of hardware, communication protocols, embedded software, and machine learning."
+    },
+    {
+      "start": "Mar 2021",
+      "end": "Sep 2021",
+      "image": "static/resume/uza.png",
+      "company": "UZA",
+      "position": "Internship",
+      "comment": "Individual project linked to honours programme. Data measurment and analysis of food temperature for premature babies. For data processing I used Seaborn, Pandas and Sklearn."
+    },
+    {
+      "start": "Jul 2019",
+      "end": "Sep 2019",
+      "image": "static/resume/cuberdon.jpeg",
+      "company": "Cuberdon Software Solutions",
+      "position": "Internship",
+      "comment": "Responsible for integrating a form analyser and speech recognition system into a website for an insurance company. Mostly worked on the back-end using Azure service APIs."
+    }
+  ],
+  "academic": [
+    {
+      "name": "meme.ir",
+      "link": "https://github.com/tdooms/meme.ir",
+      "date": "2022",
+      "description": "A group project in which we finetuned a transformer model to predict a meme template given only the text. We achieved 70% top-1 accuracy on 100 templates."
+    },
+    {
+      "name": "GNMX",
+      "link": "https://github.com/GNMX-UA/GNMX",
+      "date": "2021",
+      "description": "An interdisciplinary group project about computational biology. We developed a simulation and visualisation to investigate the genetic polymorphism phenomenon."
+    },
+    {
+      "name": "O4 Compiler",
+      "link": "https://github.com/tdooms/o4-compiler",
+      "date": "2020",
+      "description": "A fully fledged C to MIPS compiler using antlr4 and LLVM. There are several optimisation techniques which make the output quite optimised."
+    }
+  ],
+  "personal": [
+    {
+      "name": "PixelGuesser",
+      "link": "https://github.com/tdooms/pixelguesser",
+      "date": "2022",
+      "description": "PixelGuesser is a party game where players have to guess the contents of a heavily pixelated image which slowly grows more detailed over time. "
+    },
+    {
+      "name": "Ray marching renderer",
+      "link": "https://github.com/tdooms/paw",
+      "date": "2021",
+      "description": "Easy to use ray marching renderer using JSON for scene description. Many primitives, composables and textures are supported."
+    },
+    {
+      "name": "C++ ini parser",
+      "link": "https://github.com/tdooms/ini-parser",
+      "date": "2019",
+      "description": "A Pythonic ini parser written in c++ using template hacking. The main goals are speed and ease of use. The ini file is read using a performant custom parser."
+    }
+  ]
+}

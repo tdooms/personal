@@ -1,11 +1,11 @@
 use cobul::*;
-use implicit_clone::unsync::IString;
 use yew::*;
-use crate::resume::CvProps;
+
+use super::ResumeData;
 
 #[derive(serde::Deserialize, Properties, PartialEq, Clone, Debug)]
 struct AwardData {
-    pub text: IString,
+    pub text: AttrValue,
 }
 
 #[function_component(Item)]
@@ -22,11 +22,11 @@ fn item(props: &AwardData) -> Html {
 
 
 #[function_component(Awards)]
-pub fn awards(CvProps{cv}: &CvProps) -> Html {
+pub fn awards(resume: &ResumeData) -> Html {
     html! {
         <>
         <Title size={HeaderSize::Is4} class="mb-3"> {"Honours and Awards"} </Title>
-        { for cv.awards.iter().map(|text| html! {<Item {text} />}) }
+        { for resume.awards.iter().map(|text| html! {<Item {text} />}) }
         </>
     }
 }

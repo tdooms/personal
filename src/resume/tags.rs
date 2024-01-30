@@ -1,37 +1,36 @@
 use cobul::*;
-use implicit_clone::unsync::{IArray, IString};
+use implicit_clone::unsync::{IArray};
 use yew::*;
-use crate::resume::CvProps;
+
+use super::ResumeData;
 
 
 #[derive(Properties, PartialEq, Clone, Debug)]
-struct Props {
-    pub items: IArray<IString>,
-    pub title: IString,
+struct InnerProps {
+    pub items: IArray<AttrValue>,
+    pub title: AttrValue,
 }
 
 #[function_component(Inner)]
-fn inner(props: &Props) -> Html {
+fn inner(props: &InnerProps) -> Html {
     let tag = |text| html! { <Tag size={Size::Large} color={Color::Light}> {text} </Tag> };
 
     html! {
         <>
         <Title size={HeaderSize::Is4} class="mb-3"> {props.title.clone()} </Title>
-        <Tags>
-        { for props.items.iter().map(tag) }
-        </Tags>
+        <Tags> { for props.items.iter().map(tag) } </Tags>
         </>
     }
 }
 
 #[function_component(Hobbies)]
-pub fn hobbies(CvProps{cv}: &CvProps) -> Html {
-    html!{ <Inner title="Hobbies" items={cv.hobbies.clone()} />}
+pub fn hobbies(resume: &ResumeData) -> Html {
+    html!{ <Inner title="Hobbies" items={resume.hobbies.clone()} />}
 }
 
 #[function_component(Traits)]
-pub fn traits(CvProps{cv}: &CvProps) -> Html {
-    html!{ <Inner title="Traits" items={cv.traits.clone()} />}
+pub fn traits(resume: &ResumeData) -> Html {
+    html!{ <Inner title="Traits" items={resume.traits.clone()} />}
 }
 
 

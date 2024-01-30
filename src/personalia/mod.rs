@@ -14,7 +14,7 @@ pub struct PersonaliaData {
 
 #[function_component(Personalia)]
 pub fn personalia() -> Html {
-    let str = include_str!("data.json");
+    let str = include_str!("../../static/personalia.json");
     let PersonaliaData{profile, contact} = serde_json::from_str(str).unwrap();
 
     html! { <> <Profile ..profile/> <Contact ..contact/> </> }

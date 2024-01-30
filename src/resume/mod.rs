@@ -8,11 +8,11 @@ mod tags;
 mod skill;
 mod language;
 
-use implicit_clone::unsync::{IArray, IMap, IString};
+use implicit_clone::unsync::{IArray, IMap};
 use yew::*;
 use cobul::{Column, Columns, Content, Block, ColumnSize};
 use implicit_clone::ImplicitClone;
-use yew::suspense::use_future;
+
 
 pub use awards::*;
 pub use education::*;
@@ -22,15 +22,15 @@ pub use project::*;
 pub use tags::*;
 pub use skill::*;
 pub use language::*;
-use crate::net::get_resume;
 use crate::personalia::Personalia;
+use crate::pane::Pane;
 
-#[derive(serde::Deserialize, PartialEq, Clone)]
-pub struct Cv {
-    pub hobbies: IArray<IString>,
-    pub skills: IMap<IString, IMap<IString, u32>>,
-    pub traits: IArray<IString>,
-    pub awards: IArray<IString>,
+#[derive(Properties, serde::Deserialize, PartialEq, Clone)]
+pub struct ResumeData {
+    pub hobbies: IArray<AttrValue>,
+    pub skills: IMap<AttrValue, IMap<AttrValue, u32>>,
+    pub traits: IArray<AttrValue>,
+    pub awards: IArray<AttrValue>,
     pub languages: IArray<LanguageData>,
 
     pub programming: IArray<ProgrammingData>,
@@ -41,59 +41,44 @@ pub struct Cv {
     pub personal: IArray<ProjectData>,
 }
 
-impl ImplicitClone for Cv {}
-
-#[derive(Properties, PartialEq, Clone)]
-pub struct CvProps {
-    pub cv: Cv,
-}
+impl ImplicitClone for ResumeData {}
 
 #[function_component(Page)]
-fn page(CvProps{cv}: &CvProps) -> Html {
+fn page(resume: &ResumeData) -> Html {
     html! {
         <>
         <Columns>
             <Column>
-            <Experience {cv} /> <Block />
-            <Traits {cv} /> <Block />
-            <Awards {cv} /> <Block />
-            <Hobbies {cv} />
+            <Experience ..resume.clone() /> <Block />
+            <Traits ..resume.clone() /> <Block />
+            <Awards ..resume.clone() /> <Block />
+            <Hobbies ..resume.clone() />
             </Column>
             <Column size={ColumnSize::Is4}>
-            <Education {cv} /> <Block />
-            <Programming {cv} />
+            <Education ..resume.clone() /> <Block />
+            <Programming ..resume.clone() />
             </Column>
         </Columns>
         <Columns>
-            <Column> <Academic {cv} /> </Column>
-            <Column> <Personal {cv} /> </Column>
+            <Column> <Academic ..resume.clone() /> </Column>
+            <Column> <Personal ..resume.clone() /> </Column>
         </Columns>
         </>
     }
 }
 
-#[function_component(Inner)]
-fn inner() -> HtmlResult {
-    let cv = (*use_future(get_resume)?).clone();
-    let class = "pl-5 pt-0 mb-3 pb-0 has-background-light";
-
-    let html = html! {
+#[function_component(Resume)]
+pub fn resume(resume: &ResumeData) -> Html {
+    html! {
         <Columns>
-        <Column size={ColumnSize::Is3} {class}>
+        <Pane >
             <Personalia />
-            <Languages cv={cv.clone()} />
-            <Skills cv={cv.clone()} />
-        </Column>
+            <Languages ..resume.clone() />
+            <Skills ..resume.clone() />
+        </Pane>
         <Column>
-            <Content> <Page cv={cv.clone()} /> </Content>
+            <Content> <Page ..resume.clone() /> </Content>
         </Column>
         </Columns>
-    };
-    Ok(html)
-}
-
-#[function_component(Resume)]
-pub fn resume() -> Html {
-    let fallback = html! {<div> {"Loading..."} </div>};
-    html! { <Suspense {fallback}> <Inner /> </Suspense> }
+    }
 }

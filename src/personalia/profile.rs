@@ -1,14 +1,13 @@
 use yew::*;
 use cobul::*;
 use serde::Deserialize;
-use implicit_clone::{unsync::IString};
 
 #[derive(Deserialize, Properties, PartialEq, Clone, Debug)]
 pub struct ProfileData {
     pub name: AttrValue,
-    pub location: IString,
-    pub profession: IString,
-    pub picture: IString,
+    pub location: AttrValue,
+    pub profession: AttrValue,
+    pub picture: AttrValue,
 }
 
 #[function_component(Profile)]

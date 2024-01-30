@@ -1,12 +1,13 @@
 use cobul::*;
 use yew::*;
-use implicit_clone::{ImplicitClone, unsync::IString};
-use crate::resume::CvProps;
+use implicit_clone::{ImplicitClone};
+
+use super::ResumeData;
 
 #[derive(serde::Deserialize, Properties, PartialEq, Clone, Debug)]
 pub struct LanguageData {
-    pub name: IString,
-    pub level: IString,
+    pub name: AttrValue,
+    pub level: AttrValue,
     pub value: u64,
 }
 
@@ -26,6 +27,6 @@ pub fn language(props: &LanguageData) -> Html {
 }
 
 #[function_component(Languages)]
-pub fn languages(CvProps{cv}: &CvProps) -> Html {
-    html! {for cv.languages.iter().map(|data| html! {<Language ..data />})}
+pub fn languages(resume: &ResumeData) -> Html {
+    html! {for resume.languages.iter().map(|data| html! {<Language ..data />})}
 }

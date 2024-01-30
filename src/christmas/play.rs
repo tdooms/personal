@@ -1,6 +1,6 @@
 use std::collections::HashMap;
 use std::rc::Rc;
-use implicit_clone::unsync::IString;
+
 use web_sys::HtmlImageElement;
 use yew::*;
 use yew_router::hooks::use_navigator;
@@ -11,13 +11,13 @@ use super::reveal::Reveal;
 use super::wait::Wait;
 use super::summary::Summary;
 
-pub type Quiz = Rc<HashMap<IString, IString>>;
-pub type Data = Rc<HashMap<IString, Quiz>>;
+pub type Quiz = Rc<HashMap<AttrValue, AttrValue>>;
+pub type Data = Rc<HashMap<AttrValue, Quiz>>;
 pub type Images = Rc<Vec<HtmlImageElement>>;
 
 #[derive(Clone, Debug, PartialEq, Properties)]
 pub struct Props {
-    pub id: IString,
+    pub id: AttrValue,
 }
 
 enum Stage {
@@ -36,7 +36,7 @@ pub fn play(props: &Props) -> Html {
         serde_json::from_str::<Data>(str).unwrap()
     });
 
-    let convert = |(_, v): (&IString, &IString)| {
+    let convert = |(_, v): (&AttrValue, &AttrValue)| {
         let image = HtmlImageElement::new().unwrap();
         image.set_src(v.as_str());
         image

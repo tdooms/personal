@@ -1,0 +1,9 @@
+{
+    "blogs": [
+        {
+            "date": "2014-06-30",
+            "title": "The First Post",
+            "image": "static/resume/ua.jpg"
+        }
+    ]
+}

@@ -1,19 +1,20 @@
 use cobul::*;
 use yew::*;
-use implicit_clone::{ImplicitClone, unsync::IString};
-use crate::resume::CvProps;
+use implicit_clone::{ImplicitClone};
+
+use super::ResumeData;
 
 #[derive(serde::Deserialize, Properties, PartialEq, Clone, Debug)]
 pub struct ExperienceData {
-    pub image: IString,
+    pub image: AttrValue,
 
-    pub start: IString,
-    pub end: IString,
+    pub start: AttrValue,
+    pub end: AttrValue,
 
-    pub company: IString,
-    pub position: IString,
+    pub company: AttrValue,
+    pub position: AttrValue,
 
-    pub comment: IString,
+    pub comment: AttrValue,
 }
 
 impl ImplicitClone for ExperienceData {}
@@ -38,11 +39,11 @@ fn item(props: &ExperienceData) -> Html {
 }
 
 #[function_component(Experience)]
-pub fn experience(CvProps{cv}: &CvProps) -> Html {
+pub fn experience(resume: &ResumeData) -> Html {
     html! {
         <>
         <Title size={HeaderSize::Is4} class="mb-3"> {"Experience"} </Title>
-        { for cv.experience.iter().map(|data| html! {<Item ..data />}) }
+        { for resume.experience.iter().map(|data| html! {<Item ..data />}) }
         </>
     }
 }

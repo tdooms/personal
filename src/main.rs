@@ -3,35 +3,31 @@ mod net;
 mod util;
 mod personalia;
 mod resume;
-mod christmas;
+mod research;
+mod blogs;
+// mod christmas;
 mod home;
+mod pane;
 
 use crate::nav::{Navbar, Route};
+use crate::net::Remote;
 use crate::resume::Resume;
-use crate::christmas::{Christmas, Play};
+
+use crate::blogs::Blogs;
 use crate::home::Home;
 use yew::*;
 use yew_router::{BrowserRouter, Switch};
 
-
-fn navbar(route: Route) -> Html {
-    html! { <Navbar route={route} /> }
-}
-
 fn switch(route: Route) -> Html {
-    let navbar = match route {
-        Route::Play { .. } => html! { },
-        _ => html! { <Navbar route={route.clone()} /> },
-    };
     let inner = match route {
         Route::Home => html! { <Home /> },
-        Route::Blog => html! { <div> {"Blog"} </div> },
+        Route::Blog => html! { <Remote<Blogs> path="static/blogs.json" /> },
         Route::Research => html! { <div> {"Research"} </div> },
-        Route::Resume => html! { <Resume /> },
-        Route::Christmas => html! { <Christmas /> },
-        Route::Play{id} => html! { <Play id={id} /> },
+        Route::Resume => html! { <Remote<Resume> path="static/resume.json" /> },
+        // Route::Christmas => html! { <Christmas /> },
+        // Route::Play{id} => html! { <Play id={id} /> },
     };
-    html! {<>{navbar}{inner}</> }
+    html! {<> <Navbar route={route.clone()} /> {inner}</> }
 }
 
 #[function_component(App)]

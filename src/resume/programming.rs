@@ -1,13 +1,14 @@
 use cobul::*;
 use yew::*;
-use implicit_clone::{ImplicitClone, unsync::IString};
-use crate::resume::CvProps;
+use implicit_clone::{ImplicitClone};
+
+use super::ResumeData;
 
 #[derive(serde::Deserialize, Properties, PartialEq, Clone, Debug)]
 pub struct ProgrammingData {
-    pub image: IString,
-    pub title: IString,
-    pub sub: IString,
+    pub image: AttrValue,
+    pub title: AttrValue,
+    pub sub: AttrValue,
 }
 
 impl ImplicitClone for ProgrammingData {}
@@ -29,12 +30,12 @@ fn item(props: &ProgrammingData) -> Html {
 }
 
 #[function_component(Programming)]
-pub fn programming(CvProps{cv}: &CvProps) -> Html {
+pub fn programming(resume: &ResumeData) -> Html {
     html! {
         <>
         <Title size={HeaderSize::Is4} class="mb-3"> {"Programming"} </Title>
         <Columns multiline=true>
-        { for cv.programming.iter().map(|data| html! {<Item ..data />}) }
+        { for resume.programming.iter().map(|data| html! {<Item ..data />}) }
         </Columns>
         </>
     }

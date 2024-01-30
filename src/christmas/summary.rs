@@ -1,11 +1,11 @@
 use yew::*;
 use cobul::*;
 use cobul::icons::Solid;
-use implicit_clone::unsync::IString;
+
 
 #[derive(Clone, Debug, PartialEq, Properties)]
 pub struct Props {
-    pub images: Vec<(IString, IString)>,
+    pub images: Vec<(AttrValue, AttrValue)>,
     pub done: Callback<()>,
 }
 

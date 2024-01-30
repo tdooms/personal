@@ -1,8 +1,8 @@
 use cobul::icons::Solid;
 use cobul::*;
-use implicit_clone::unsync::IString;
+
 use strum::{Display, EnumIter};
-use yew::{Callback, classes, function_component, Html, html, Properties};
+use yew::{classes, function_component, html, AttrValue, Callback, Html, Properties};
 use yew_router::hooks::use_navigator;
 use yew_router::Routable;
 
@@ -17,21 +17,21 @@ pub enum Route {
     Research,
     #[at("/resume")]
     Resume,
-    #[at("/christmas")]
-    Christmas,
-    #[at("/christmas/play/:id")]
-    Play { id: String },
+    // #[at("/christmas")]
+    // Christmas,
+    // #[at("/christmas/play/:id")]
+    // Play { id: String },
 }
 
 impl Route {
-    fn icon(&self) -> IString {
+    fn icon(&self) -> AttrValue {
         match self {
             Self::Home => Solid::House,
             Self::Blog => Solid::Fire,
             Self::Resume => Solid::List,
             Self::Research => Solid::Atom,
-            Self::Christmas => Solid::Gifts,
-            Self::Play { .. } => Solid::Play,
+            // Self::Christmas => Solid::Gifts,
+            // Self::Play { .. } => Solid::Play,
         }.to_string().into()
     }
 }
@@ -64,7 +64,7 @@ pub fn navbar(props: &Props) -> Html {
         }
     };
 
-    let onclick = goto.reform(move |_| Route::Christmas);
+    // let onclick = goto.reform(move |_| Route::Christmas);
 
     html! {
         <Columns class="has-background-light pt-3 has-text-centered">
@@ -74,9 +74,9 @@ pub fn navbar(props: &Props) -> Html {
         {view_tab(Route::Research)}
         {view_tab(Route::Resume)}
         <Column size={ColumnSize::Is3} />
-        <Column class="pt-1 pb-0">
-        <a {onclick}> <img src="static/christmas/tree.png" width=36 height=36 /> </a>
-        </Column>
+        // <Column class="pt-1 pb-0">
+        // // <a {onclick}> <img src="static/christmas/tree.png" width=36 height=36 /> </a>
+        // </Column>
         </Columns>
     }
 }
