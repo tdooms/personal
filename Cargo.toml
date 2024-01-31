@@ -8,7 +8,10 @@ edition = "2021"
 [dependencies]
 yew = { version = "0.21", features = ["csr"] }
 yew-router = "0.18"
+
 cobul = { git = "https://github.com/tdooms/cobul.git", features = ["icons", "simple", "props", "model"] }
+wasm-logger = "0.2"
+log = "0.4"
 
 web-sys = { version = "0.3", features = ["Window", "HtmlImageElement", "HtmlCanvasElement", "HtmlDivElement", "CanvasRenderingContext2d"] }
 wasm-bindgen = "0.2"

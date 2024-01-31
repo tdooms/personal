@@ -1,7 +1,7 @@
 use cobul::*;
 use yew::*;
 use cobul::icons::Brands;
-use implicit_clone::{ImplicitClone};
+use implicit_clone::ImplicitClone;
 use crate::util::redirect;
 
 use super::ResumeData;

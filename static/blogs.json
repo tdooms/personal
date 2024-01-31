@@ -1,9 +1,34 @@
 {
     "blogs": [
         {
-            "date": "2014-06-30",
-            "title": "The First Post",
-            "image": "static/resume/ua.jpg"
+            "date": "2024-06-30",
+            "name": "medicine",
+            "title": "An analogy of neural networks and the human body",
+            "image": "/static/blogs/medicine.png"
+        },
+        {
+            "date": "2024-06-30",
+            "name": "questions",
+            "title": "Reflecting on beginner questions in machine learning",
+            "image": "/static/blogs/questions.png"
+        },
+        {
+            "date": "2024-06-30",
+            "name": "alternatives",
+            "title": "Some thoughts on biologically inspired models",
+            "image": "/static/blogs/alternatives.png"
+        },
+        {
+            "date": "2024-06-30",
+            "name": "tools",
+            "title": "My take on mechanistic interpretability techniques",
+            "image": "/static/blogs/tools.png"
+        },
+        {
+            "date": "2024-06-30",
+            "name": "fullstack",
+            "title": "My experience with full-stack Rust development",
+            "image": "/static/blogs/fullstack.png"
         }
     ]
 }

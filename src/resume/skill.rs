@@ -1,4 +1,4 @@
-use implicit_clone::unsync::{IMap};
+use implicit_clone::unsync::IMap;
 use cobul::*;
 use yew::*;
 

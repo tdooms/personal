@@ -1,14 +1,19 @@
 use yew::*;
 use cobul::*;
 use crate::personalia::Personalia;
-use crate::pane::Pane;
+use crate::page::Page;
 
 #[function_component(Home)]
 pub fn home() -> Html {
-    html! {
-        <Columns>
-        <Pane > <Personalia /> </Pane>
-        <Column style="height: 96vh"> <Container> {"Under construction"} </Container> </Column>
-        </Columns>
+    let pane = html! {<Personalia />};
+
+
+    html! { 
+        <Page {pane} fullheight=true> 
+            <Title size={HeaderSize::Is4}> {"Hi! I am Thomas."}</Title>
+            <Subtitle size={HeaderSize::Is5}> {"I'm a machine learning researcher interested in understanding how neural networks work."}</Subtitle>
+
+            
+        </Page> 
     }
 }

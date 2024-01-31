@@ -1,6 +1,6 @@
 use cobul::*;
 use yew::*;
-use implicit_clone::{ImplicitClone};
+use implicit_clone::ImplicitClone;
 
 use super::ResumeData;
 

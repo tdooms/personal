@@ -7,3 +7,15 @@ pub fn redirect(url: AttrValue) -> Callback<()> {
     })
 }
 
+#[macro_export]
+macro_rules! callback {
+    ( $y:expr ) => {
+        yew::Callback::from($y)
+    };
+    ( $( $x:ident ),*; $y:expr ) => {
+        {
+            $(let $x = $x.clone();)*
+            yew::Callback::from($y)
+        }
+    };
+}

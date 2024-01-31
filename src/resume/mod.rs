@@ -22,8 +22,7 @@ pub use project::*;
 pub use tags::*;
 pub use skill::*;
 pub use language::*;
-use crate::personalia::Personalia;
-use crate::pane::Pane;
+use crate::{page::Page, personalia::Personalia};
 
 #[derive(Properties, serde::Deserialize, PartialEq, Clone)]
 pub struct ResumeData {
@@ -43,8 +42,8 @@ pub struct ResumeData {
 
 impl ImplicitClone for ResumeData {}
 
-#[function_component(Page)]
-fn page(resume: &ResumeData) -> Html {
+#[function_component(Inner)]
+fn inner(resume: &ResumeData) -> Html {
     html! {
         <>
         <Columns>
@@ -69,16 +68,13 @@ fn page(resume: &ResumeData) -> Html {
 
 #[function_component(Resume)]
 pub fn resume(resume: &ResumeData) -> Html {
-    html! {
-        <Columns>
-        <Pane >
-            <Personalia />
-            <Languages ..resume.clone() />
-            <Skills ..resume.clone() />
-        </Pane>
-        <Column>
-            <Content> <Page ..resume.clone() /> </Content>
-        </Column>
-        </Columns>
-    }
+    let pane = html! {
+        <>
+        <Personalia />
+        <Languages ..resume.clone() />
+        <Skills ..resume.clone() />
+        </>
+    };
+
+    html! {<Page {pane}> <Inner ..resume.clone() /> </Page> }
 }

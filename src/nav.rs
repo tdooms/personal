@@ -6,6 +6,8 @@ use yew::{classes, function_component, html, AttrValue, Callback, Html, Properti
 use yew_router::hooks::use_navigator;
 use yew_router::Routable;
 
+use crate::callback;
+
 #[derive(Clone, EnumIter, PartialEq, Display, Routable)]
 pub enum Route {
     #[not_found]
@@ -17,10 +19,8 @@ pub enum Route {
     Research,
     #[at("/resume")]
     Resume,
-    // #[at("/christmas")]
-    // Christmas,
-    // #[at("/christmas/play/:id")]
-    // Play { id: String },
+    #[at("/blog/:name")]
+    Post { name: AttrValue },
 }
 
 impl Route {
@@ -30,9 +30,10 @@ impl Route {
             Self::Blog => Solid::Fire,
             Self::Resume => Solid::List,
             Self::Research => Solid::Atom,
-            // Self::Christmas => Solid::Gifts,
-            // Self::Play { .. } => Solid::Play,
-        }.to_string().into()
+            _ => Solid::E,
+        }
+        .to_string()
+        .into()
     }
 }
 
@@ -43,13 +44,13 @@ pub struct Props {
 
 #[function_component(Navbar)]
 pub fn navbar(props: &Props) -> Html {
-    let route = props.route.clone();
-
-    let navigator = use_navigator().unwrap();
-    let goto = Callback::from(move |route: Route| navigator.push(&route));
+    let goto = {
+        let navigator = use_navigator().unwrap();
+        callback!(move |route: Route| navigator.push(&route))
+    };
 
     let view_tab = |tab: Route| {
-        let state = if tab == route {"my-navbar-selected"} else {"my-navbar-item"};
+        let state = if tab == props.route {"my-navbar-selected"} else {"my-navbar-item"};
         let class = classes!("column", state);
 
         let onclick = {
@@ -64,8 +65,6 @@ pub fn navbar(props: &Props) -> Html {
         }
     };
 
-    // let onclick = goto.reform(move |_| Route::Christmas);
-
     html! {
         <Columns class="has-background-light pt-3 has-text-centered">
         <Column size={ColumnSize::Is3} />
@@ -74,9 +73,6 @@ pub fn navbar(props: &Props) -> Html {
         {view_tab(Route::Research)}
         {view_tab(Route::Resume)}
         <Column size={ColumnSize::Is3} />
-        // <Column class="pt-1 pb-0">
-        // // <a {onclick}> <img src="static/christmas/tree.png" width=36 height=36 /> </a>
-        // </Column>
         </Columns>
     }
 }

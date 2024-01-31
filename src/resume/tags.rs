@@ -1,5 +1,5 @@
 use cobul::*;
-use implicit_clone::unsync::{IArray};
+use implicit_clone::unsync::IArray;
 use yew::*;
 
 use super::ResumeData;
