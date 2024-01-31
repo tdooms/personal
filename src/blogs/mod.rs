@@ -40,8 +40,10 @@ pub struct Props {
 
 #[function_component(Post)]
 pub fn post(props: &Props) -> Html {
-    match props.name.as_str() {
+    let content = match props.name.as_str() {
         "medicine" => html! { <Page> <Medicine /> </Page> },
         _ => html! { <Page> {"not found"} </Page> },
-    }
+    };
+
+    html! {<Columns centered=true> <Column size={ColumnSize::IsNarrow}> {content} </Column> </Columns>}
 }

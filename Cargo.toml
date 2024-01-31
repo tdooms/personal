@@ -3,8 +3,6 @@ name = "personal"
 version = "0.1.0"
 edition = "2021"
 
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
-
 [dependencies]
 yew = { version = "0.21", features = ["csr"] }
 yew-router = "0.18"
@@ -24,3 +22,5 @@ serde_json = "1.0"
 gloo = { version = "0.11.0", features = ["net", "timers"] }
 
 anyhow = "1.0"
+
+plotly = { version = "0.8", features = ["wasm"] }

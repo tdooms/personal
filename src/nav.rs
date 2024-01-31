@@ -21,6 +21,8 @@ pub enum Route {
     Resume,
     #[at("/blog/:name")]
     Post { name: AttrValue },
+    #[at("/test")]
+    Test,
 }
 
 impl Route {

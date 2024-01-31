@@ -144,9 +144,7 @@ pub fn medicine() -> Html {
     We should exploit the scientific method that has been established throughout multiple fields in our quest to understand 
     neural networks. Finally, we should share our acquired insights through interactive visualisations and shared knowledge atlasses.";
 
-
-
-    let content = html! {
+    html! {
         <Content style="width:700px">
             <Title size={HeaderSize::Is4}> {title} </Title>
             <p> {p1} </p>
@@ -168,7 +166,7 @@ pub fn medicine() -> Html {
             <p> {p12} </p>
             <p> {p13} </p>
             <p> {p14} </p>
+            <p> {p15} </p>
         </Content>
-    };
-    html! {<Columns centered=true> <Column size={ColumnSize::IsNarrow}> {content} </Column> </Columns>}
+    }
 }

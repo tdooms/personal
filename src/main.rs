@@ -8,10 +8,12 @@ mod blogs;
 // mod christmas;
 mod home;
 mod page;
+mod test;
 
 use crate::nav::{Navbar, Route};
 use crate::net::Remote;
 use crate::resume::Resume;
+use crate::test::Test;
 
 use crate::blogs::{Blogs, Post};
 use crate::home::Home;
@@ -25,6 +27,7 @@ fn switch(route: Route) -> Html {
         Route::Research => html! { <div> {"Research"} </div> },
         Route::Resume => html! { <Remote<Resume> path="static/resume.json" /> },
         Route::Post{name} => html! { <Post {name} /> },
+        Route::Test => html! { <Test /> },
         // Route::Christmas => html! { <Christmas /> },
         // Route::Play{id} => html! { <Play id={id} /> },
     };
