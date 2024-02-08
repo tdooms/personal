@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
     import Education from "$lib/resume/education.svelte";
     import Languages from "$lib/resume/languages.svelte";
     import Programming from "$lib/resume/programming.svelte";

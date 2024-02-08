@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
     import Paper from "$lib/paper.svelte";
     import Presentation from "$lib/presentation.svelte";
 
