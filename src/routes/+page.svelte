@@ -43,18 +43,18 @@
                 <p> Hi, I'm Thomas! I'm a first year PhD student working on mechanistic interpretability in machine learning. </p>
 
                 <p> 
-                    I work under the supervision of Jose M. Oramas at the University of Antwerp within IDLab-imec. 
-                    My research focusses on scaling up current mechanistic interpretability techniques to increasingly characterise current language models.
+                    My research focusses on understanding neural networks from their weights. 
+                    This allows us to make guarantees about their behaviour and failure modes.
                 </p>
 
                 <p> 
                     Machine learning models have become an undeniably useful tool in recent years. 
                     Yet, they remain shrouded in mystery; both in research and everyday use. 
-                    Understanding these models will not only help their trustworthiness but also make it easier to improve them.
+                    Understanding these models will not only help their trustworthiness but guarantee their utility.
                 </p>
 
                 <p>
-                    Outside of work, I love to go on long bike rides, game with friends and solve chess puzzles.
+                    Outside of work, I love to go on long bike rides, game with friends, go skiing and wear shorts.
                 </p>
             </div>
         </div>

@@ -3,10 +3,16 @@
 
     const work = [
         {
+            "icon": "icons/mats.jpg",
+            "date": "May 2024 - Jun 2024",
+            "title": "MATS Program",
+            "text": "Mechanistic interpretability stream under Neel Nanda. Improved small-scale SAEs by disentangling token reconstructions from semantic features."
+        },
+        {
             "icon": "icons/cuberdon.jpeg",
             "date": "Jul 2022 - Sep 2022",
             "title": "Cuberdon Software Solutions",
-            "text": "Involved with the groundwork for a next-generation customer portal with professional dashboards, dynamic news and document organisation. Full-stack development with Vue, ASP.NET and SQL."
+            "text": "Involved with the groundwork for a next-generation customer portal. Full-stack development with Vue and ASP.NET."
         },
         {
             "icon": "icons/keysight.png",
@@ -20,12 +26,12 @@
             "title": "Antwerp University Hospital",
             "text": "Internship linked to honours programme. Data measurment and analysis of food temperature for premature babies."
         },
-        {
-            "icon": "icons/cuberdon.jpeg",
-            "date": "Jul 2022 - Sep 2022",
-            "title": "Cuberdon Software Solutions",
-            "text": "Responsible for integrating a form analyser and speech recognition into a website."
-        }
+        // {
+        //     "icon": "icons/cuberdon.jpeg",
+        //     "date": "Jul 2022 - Sep 2022",
+        //     "title": "Cuberdon Software Solutions",
+        //     "text": "Responsible for integrating a form analyser and speech recognition into a website."
+        // }
     ]
 </script>
 

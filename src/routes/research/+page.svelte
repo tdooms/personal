@@ -4,6 +4,24 @@
 
 const papers = [
     {
+        "image": "research/bilinear.png",
+        "title": "Bilinear Decomposition",
+        "alt": "A magnifying glass",
+        "date": "Jun 2024",
+        "description": "Using bilinear MLPs to reverse-engineer shallow MNIST and Tiny Stories models using only their weights.",
+        "paper": "https://arxiv.org/abs/2406.03947",
+        "code": "https://github.com/tdooms/bilinear-decomposition"
+    },
+    {
+        "image": "research/disentangle.png",
+        "title": "Tokenized SAEs",
+        "alt": "A split arrow",
+        "date": "Jun 2024",
+        "description": "We propose using a per-token bias in SAEs to separate token reconstructions from interesting, semantic features.",
+        "paper": "documents/tokenized_saes.pdf",
+        "code": ""
+    },
+    {
         "image": "research/trifecta.png",
         "title": "The Trifecta",
         "alt": "A trident",

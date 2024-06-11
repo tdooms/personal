@@ -23,7 +23,7 @@
 
 <h5 class="title is-5"> Education </h5>
 <Media icon="icons/ua.png" date="Nov 2023 - TBD" title="PhD in Machine Learning">
-    <p class="mt-2"> <b> Subject: </b> Automating Mechanistic Interpretability</p>
+    <p class="mt-2"> <b> Subject: </b>Weight-based interpretability</p>
     <p> <b> Advisor: </b> Jose M. Oramas </p>
 </Media>
 
