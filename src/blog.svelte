@@ -1,6 +1,7 @@
 <script lang="ts">
     export let title;
     export let date;
+    export let kind = "blog";
 </script>
 
 <div class="content has-text-justified" style="margin: 0 auto;max-width: 880px;">
@@ -17,13 +18,9 @@
     </div>
 
     <slot />
-    <!-- <div class="buttons is-centered mt-5">
-        <div class="button is-primary">Previous</div>
-        <div class="button is-primary">Back</div>
-        <div class="button is-primary">Next</div>
-    </div> -->
+
     <div class="buttons is-centered mt-5">
-        <a class="button is-primary" href="/blog">Back</a>
+        <a class="button is-primary" href="/{kind}">Back</a>
     </div>
     <div class="mb-6" />
 </div>

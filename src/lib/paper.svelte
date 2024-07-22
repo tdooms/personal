@@ -7,12 +7,11 @@
     export let image: string;
     export let alt: string;
 
-    export let paper: string;
-    export let code: string;
+    export let link: string;
 
 </script>
 
-<div class="box">
+<a class="box" href={link}>
     <div class="columns is-vcentered">
         <div class="column is-narrow">
             <figure class="image is-64x64 is-inline-block">
@@ -24,14 +23,14 @@
             <small style="display: inline"> ({date}) </small>
             <p> {description} </p>
         </div>
-        <div class="column is-narrow">
+        <!-- <div class="column is-narrow"> -->
+            <!-- <a class="icon is-medium" href={summary} target="_blank">
+                <i class="fa-regular fa-lg fa-file"></i>
+            </a> -->
+            <!-- <hr class="my-3" />
             <a class="icon is-medium" href={paper} target="_blank">
                 <i class="fa-regular fa-lg fa-file"></i>
-            </a>
-            <hr class="my-3" />
-            <a class="icon is-medium" href={code} target="_blank">
-                <i class="fab fa-lg fa-github"></i>
-            </a>
-        </div>
+            </a> -->
+        <!-- </div> -->
     </div>
-</div>
+</a>

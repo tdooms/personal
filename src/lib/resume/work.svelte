@@ -24,7 +24,7 @@
             "date": "Mar 2021 - Sep 2021",
             "icon": "icons/uza.png",
             "title": "Antwerp University Hospital",
-            "text": "Internship linked to honours programme. Data measurment and analysis of food temperature for premature babies."
+            "text": "Internship linked to honours programme. Data measurement and analysis of food temperature for premature babies."
         },
         // {
         //     "icon": "icons/cuberdon.jpeg",

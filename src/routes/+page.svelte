@@ -18,12 +18,7 @@
             <hr />
             <div class="block">
                 <span class="icon"><i class="fas fa-envelope"></i> </span>
-                <span> doomsthomas@gmail.com </span>
-            </div>
-
-            <div class="block">
-                <span class="icon"><i class="fas fa-phone"></i> </span>
-                <span> +32478523443 </span>
+                <span> <a href="mailto:doomsthomas@gmail.com"> Email </span>
             </div>
 
             <div class="block">

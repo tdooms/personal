@@ -10,7 +10,8 @@ const papers = [
         "date": "Jun 2024",
         "description": "Using bilinear MLPs to reverse-engineer shallow MNIST and Tiny Stories models using only their weights.",
         "paper": "https://arxiv.org/abs/2406.03947",
-        "code": "https://github.com/tdooms/bilinear-decomposition"
+        "code": "https://github.com/tdooms/bilinear-decomposition",
+        "link": "research/bilinear"
     },
     {
         "image": "research/disentangle.png",
@@ -19,7 +20,8 @@ const papers = [
         "date": "Jun 2024",
         "description": "We propose using a per-token bias in SAEs to separate token reconstructions from interesting, semantic features.",
         "paper": "documents/tokenized_saes.pdf",
-        "code": ""
+        "code": "",
+        "link": "research/tokenized"
     },
     {
         "image": "research/trifecta.png",
@@ -28,7 +30,8 @@ const papers = [
         "date": "Nov 2023",
         "description": "Three techniques to significantly improve the Forward-Forward algorithm. We achieve 84% on CIFAR-10.",
         "paper": "https://arxiv.org/abs/2311.18130",
-        "code": "https://github.com/tdooms/trifecta"
+        "code": "https://github.com/tdooms/trifecta",
+        "link": "research/trifecta"
     }
 ]
 const presentations = [
