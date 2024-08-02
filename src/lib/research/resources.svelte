@@ -19,7 +19,7 @@
 
     {#if code}
     <div class="column is-2">
-        <a class="box has-text-centered" href={paper} target="_blank">
+        <a class="box has-text-centered" href={code} target="_blank">
             <span class="icon is-large">
                 <i class="fa-brands fa-xl fa-github"></i>
             </span>
