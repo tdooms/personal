@@ -1,5 +1,4 @@
 <script lang="ts">
-    import { goto } from "$app/navigation";
     import Card from "$lib/card.svelte";
 
     const blogs = [
@@ -15,23 +14,11 @@
             image: "blogs/questions.png",
             location: "blog/questions"
         }
-        // {
-        //     title: "My take on mechanistic interpretability techniques",
-        //     date: "coming soon",
-        //     image: "blogs/tools.png",
-        //     location: "blog/tools"
-        // },
-        // {
-        //     title: "Some thoughts on alternative deep learning paradigms",
-        //     date: "coming soon",
-        //     image: "blogs/alternatives.png",
-        //     location: "blog/alternatives"
-        // },
     ]
 
 </script>
 
-<div class="columns is-multiline mx-6">
+<div class="columns is-multiline">
     {#each blogs as blog}
         <div class="column is-4">
             <Card {...blog} />

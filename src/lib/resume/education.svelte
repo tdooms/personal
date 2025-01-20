@@ -4,12 +4,12 @@
     const education = [
         {
             "date": "Sep 2021 - Jun 2023",
-            "title": "Master in Artificial Intelligence",
+            "title": "Master in AI",
             "grade": "Summa cum laude (87%)"
         },
         {
             "date": "Sep 2019 - Aug 2021",
-            "title": "Honours Programme in Science",
+            "title": "Honours Programme",
             "grade": "Summa cum laude (85%)"
         },
         {

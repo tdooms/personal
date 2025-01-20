@@ -3,21 +3,21 @@
     
     const awards = [
         {
-            "title": "6-time top 100 in Flemish Math Olympiad",
-            "date": "(2010 - 2018)"
-        },
-        {
-            "title": "4-time semi-finalist in Flemish science olympiads",
-            "date": "(2016 - 2018)"
+            "title": "3rd place in the Belgian cyber security challenge",
+            "date": "(2023)"
         },
         {
             "title": "2nd place on collaborative math olympiad: Wiskunnend Wiske",
             "date": "(2018)"
         },
         {
-            "title": "3rd place in the Belgian cyber security challenge",
-            "date": "(2023)"
-        }
+            "title": "4-time semi-finalist in Flemish science olympiads",
+            "date": "(2016 - 2018)"
+        },
+        {
+            "title": "6-time top 100 in Flemish Math Olympiad",
+            "date": "(2010 - 2018)"
+        },
     ]
 </script>
 

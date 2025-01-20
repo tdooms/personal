@@ -13,7 +13,7 @@
             <h4 class="subtitle is-4"> <b> Thomas Dooms </b> </h4>
             <!-- <h6 class="subtitle is-6"> Antwerp, Belgium </h6> -->
 
-            <h6 class="subtitle is-6"> Machine Learning Researcher </h6>
+            <h6 class="subtitle is-6"> Interpretability Researcher </h6>
 
             <hr />
             <div class="block">
@@ -35,17 +35,16 @@
     <div class="column">
         <div class="box">
             <div class="content">
-                <p> Hi, I'm Thomas! I'm a first year PhD student working on mechanistic interpretability in machine learning. </p>
+                <p> Hi, I'm Thomas! I'm a second year PhD student working on mechanistic interpretability. </p>
 
-                <p> 
-                    My research focusses on understanding neural networks from their weights. 
-                    This allows us to make guarantees about their behaviour and failure modes.
+                <p>
+                    My academic interest lies in understanding neural networks from their weights. <br>
+                    I believe this to be the most promising avenue to understanding what a model has learned. <br>
+                    Tensor decompositions help us understand what is important to the model.
                 </p>
 
-                <p> 
-                    Machine learning models have become an undeniably useful tool in recent years. 
-                    Yet, they remain shrouded in mystery; both in research and everyday use. 
-                    Understanding these models will not only help their trustworthiness but guarantee their utility.
+                <p>
+                    I am guided by curiosity, strive for simplicity, and try to be effective.
                 </p>
 
                 <p>

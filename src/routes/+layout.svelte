@@ -1,3 +1,3 @@
-<main class="container mt-5">
+<main class="container is-max-desktop mt-5">
     <slot/>
 </main>

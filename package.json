@@ -1,5 +1,5 @@
 {
-	"name": "personal2",
+	"name": "personal",
 	"version": "0.0.1",
 	"private": true,
 	"scripts": {
@@ -8,7 +8,7 @@
 		"preview": "vite preview",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
-		"css-build": "node-sass --omit-source-map-url src/styles.scss static/styles.css",
+		"css-build": "sass --load-path=node_modules src/styles.scss static/styles.css",
 		"css-watch": "npm run css-build -- --watch"
 	},
 	"devDependencies": {
@@ -26,10 +26,11 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"bulma": "^0.9.4",
+		"bulma": "^1.0.3",
 		"bulma-extensions": "^6.2.7",
 		"mdsvex": "^0.11.0",
 		"node-sass": "^9.0.0",
-		"rehype-katex-svelte": "^1.2.0"
+		"rehype-katex-svelte": "^1.2.0",
+		"sass": "^1.83.4"
 	}
 }
