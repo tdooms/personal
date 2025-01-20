@@ -1,6 +1,5 @@
 <script lang="ts">
     import Box from "$lib/box.svelte";
-    import Presentation from "$lib/presentation.svelte";
 
 const papers = [
     {
@@ -61,7 +60,7 @@ const presentations = [
         "title": "Embodied Language Models",
         "date": "Jun 2023",
         "icon": "fa-robot",
-        "published": "University Lecture",
+        "published": "University lecture",
         "description": "A presentation on the integration of LLMs into robotics.",
         "link": "https://docs.google.com/presentation/d/1oURN_cmpF-GYLYVCDLU7teZ2RL_I5oeMH8onfU7ffNM/edit?usp=sharing",
     },
@@ -69,7 +68,7 @@ const presentations = [
         "title": "Diffusion Models",
         "icon": "fa-images",
         "date": "Jan 2023",
-        "published": "University Lecture",
+        "published": "University lecture",
         "description": "A brief overview of diffusion models and the current SOTA.",
         "link": "https://docs.google.com/presentation/d/1s0gPSXldiHgu4AYji_ELhoDTNNluNiKgq8Ry_t3cJM0/edit?usp=sharing",
     },
@@ -88,17 +87,19 @@ const posts = [
 </script>
 
 
-<h5 class="title is-5"> Papers </h5>
+<h5 class="title is-5 ml-2 mt-1"> Papers </h5>
 {#each papers as paper}
     <Box {...paper} />
 {/each}
 
-<h5 class="title is-5 mt-6"> Presentations </h5>
+<h5 class="title is-5 ml-2 mt-6"> Presentations </h5>
 {#each presentations as presentation}
     <Box {...presentation} />
 {/each}
 
-<h5 class="title is-5 mt-6"> Posts </h5>
+<h5 class="title is-5 ml-2 mt-6"> Posts </h5>
 {#each posts as post}
     <Box {...post} />
 {/each}
+
+<div class="mb-6"></div>

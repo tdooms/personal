@@ -6,10 +6,8 @@
 		"dev": "vite dev",
 		"build": "vite build",
 		"preview": "vite preview",
-		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
-		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
-		"css-build": "sass --load-path=node_modules src/styles.scss static/styles.css",
-		"css-watch": "npm run css-build -- --watch"
+		"setup": "sass --load-path=node_modules src/styles.scss static/styles.css",
+		"watch": "npm run setup -- --watch"
 	},
 	"devDependencies": {
 		"@sveltejs/adapter-auto": "^3.0.0",

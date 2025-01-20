@@ -7,11 +7,11 @@ It's written in Svelte and I try to update this regularly.
 
 ```bash
 npm install
-node-sass src/styles.scss > static/styles.css
+npm setup
 npm run dev
 ```
 
-can also use ``--watch`` for node sass
+can also use ``npm watch`` instead of ``npm setup`` to continually update the css.
 
 ## Deployment
 

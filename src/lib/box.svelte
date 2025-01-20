@@ -14,7 +14,7 @@
 
 <a class="box" href={link}>
     <div class="columns is-vcentered">
-        <div class="column is-narrow">
+        <div class="column is-narrow is-hidden-mobile">
             <figure class="image is-64x64 is-inline-block">
                 <img class="is-rounded" src={image} {alt} />
             </figure>
@@ -24,7 +24,7 @@
                 <div class="column">
                     <h4 class="title is-4 mb-0"> {title} </h4>
                 </div>
-                <div class="column" style="text-align:right">
+                <div class="column is-hidden-mobile" style="text-align:right">
                     <b class="title is-6 mb-0"> {published} </b>
                     <small style="display: inline"> ({date}) </small>
                 </div>
@@ -33,14 +33,5 @@
 
             <p> {description} </p>
         </div>
-        <!-- <div class="column is-narrow"> -->
-            <!-- <a class="icon is-medium" href={summary} target="_blank">
-                <i class="fa-regular fa-lg fa-file"></i>
-            </a> -->
-            <!-- <hr class="my-3" />
-            <a class="icon is-medium" href={paper} target="_blank">
-                <i class="fa-regular fa-lg fa-file"></i>
-            </a> -->
-        <!-- </div> -->
     </div>
 </a>

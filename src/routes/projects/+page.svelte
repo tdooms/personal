@@ -46,13 +46,13 @@
 
 <div class="columns is-centered">
     <div class="column is-6">
-        <h5 class="title is-5"> Personal Projects </h5>
+        <h5 class="title ml-2 is-5"> Personal Projects </h5>
         {#each personal as project}
             <Project {...project} />
         {/each}   
     </div>
     <div class="column is-6">
-        <h5 class="title is-5"> Academic Projects </h5>
+        <h5 class="title ml-2  is-5"> Academic Projects </h5>
         {#each academic as project}
             <Project {...project} />
         {/each}        

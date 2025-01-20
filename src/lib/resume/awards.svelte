@@ -22,7 +22,7 @@
 </script>
 
 
-<h5 class="title is-5"> Awards </h5>
+
 <div class="box">
     {#each awards as award}
         <Award {...award} />

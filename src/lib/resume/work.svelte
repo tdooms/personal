@@ -35,7 +35,7 @@
     ]
 </script>
 
-<h5 class="title is-5"> Work Experience </h5>
+
 {#each work as job}
     <Media {...job}> <p class="mt-2"> {job.text} </p> </Media>
 {/each}

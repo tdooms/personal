@@ -30,6 +30,10 @@
                 <span class="icon"><i class="fab fa-github"></i> </span>
                 <span> <a href="https://github.com/tdooms"> GitHub </a> </span>
             </div>
+            <div class="block">
+                <span class="icon"> <i class="fa-brands fa-google-scholar"></i> </span>
+                <span> <a href="https://scholar.google.com/citations?user=PPakd2AAAAAJ&hl=en"> Scholar </a> </span>
+            </div>
         </div>
     </div>
     <div class="column">
