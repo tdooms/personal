@@ -5,14 +5,15 @@ kind: research
 ---
 
 <script>
-  import Resources from "$lib/research/resources.svelte";
-  import Cite from "$lib/research/cite.svelte"
+    import Resources from "$lib/research/resources.svelte";
+    import Cite from "$lib/research/cite.svelte";
+    import Pareto from "$lib/research/pareto.svelte"
 </script>
 
 <p> <b>Thomas Dooms</b>, Daniel Wilhelm </p>
 
 <div class="mt-6"> </div>
-<Resources paper="https://openreview.net/attachment?id=5Eas7HCe38&name=pdf" />
+<Resources paper="https://openreview.net/attachment?id=5Eas7HCe38&name=pdf" code="https://github.com/tdooms/smol-sae" />
 
 ### Background
 
@@ -46,10 +47,7 @@ There are some slight caveats to training this lookup table, which are described
 
 We show adding a lookup table improves the final reconstructions by a significant margin on GPT-2 layer 8.
 
-<figure>
-    <img src="/research/tokenized/pareto_nmse.svg" alt="Pareto curve of the normalized mean squared error" />
-    <figcaption>Pareto curve of the normalized mean squared error</figcaption>
-</figure>
+<Pareto />
 
 Beyond this, by forcing the SAE to use directions we know to be useful, it is able to learn much more quickly.
 We measure how much faster TSAEs reach the final reconstruction value of their baseline variant.
