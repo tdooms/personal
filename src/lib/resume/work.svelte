@@ -6,7 +6,7 @@
             "icon": "icons/mats.jpg",
             "date": "May 2024 - Sep 2024",
             "title": "MATS Program",
-            "text": "Mechanistic interpretability under Neel Nanda and Lee Sharkey resulting an ICLR paper and two ICML workshop papers."
+            "text": "Mechanistic interpretability stream with Neel Nanda and Lee Sharkey. Wrote an ICLR paper and two ICML workshop papers."
         },
         {
             "icon": "icons/cuberdon.jpeg",

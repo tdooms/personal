@@ -5,6 +5,15 @@
     export let link: string;
 </script>
 
+<style>
+    .box {
+        transition: transform 0.3s ease-in-out;
+    }
+    .box:hover {
+        transform: scale(1.02);
+    }
+</style>
+
 <a class="box" href={link} target="_blank">
     <div class="media">
         <div class="media-left">

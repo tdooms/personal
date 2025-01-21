@@ -14,7 +14,7 @@
         },
         {
             "date": "Sep 2018 - Jun 2021",
-            "title": "Bachelor of Computer Science",
+            "title": "Bachelor in CS",
             "grade": "Magna cum laude (83%)"
         }
     ]
