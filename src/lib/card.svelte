@@ -23,6 +23,7 @@
     }
 </style>
 
+<a href={location}>
 <div class="card">
     <div class="card-image">
         <figure class="image is-3by2">
@@ -33,7 +34,5 @@
         <h4 class="title is-4 mb-2"> {title} </h4>
         <div class="content"> {date} </div>
     </div>
-    <div class="card-footer">
-        <a href={location} class="button is-primary is-fullwidth" style="border-top-left-radius: 0 !important;border-top-right-radius: 0 !important">Read</a>
-    </div>
 </div>
+</a>

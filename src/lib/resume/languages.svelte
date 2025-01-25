@@ -30,7 +30,7 @@
     ]
 </script>
 
-<h5 class="title is-5"> Languages </h5>
+
 <div class="box" style="height:294px">
     {#each languages as language}
         <Language {...language} />

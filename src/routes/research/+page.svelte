@@ -1,86 +1,99 @@
 <script lang="ts">
-    import Paper from "$lib/paper.svelte";
-    import Presentation from "$lib/presentation.svelte";
+    import Box from "$lib/box.svelte";
 
 const papers = [
     {
-        "image": "research/bilinear.png",
-        "title": "Bilinear Decomposition",
-        "alt": "A magnifying glass",
-        "date": "Jun 2024",
-        "description": "Using bilinear MLPs to reverse-engineer shallow MNIST and Tiny Stories models using only their weights.",
-        "paper": "https://arxiv.org/abs/2406.03947",
-        "code": "https://github.com/tdooms/bilinear-decomposition",
+        "title": "Bilinear MLPs enable weight-based mechanistic interpretability",
+        "date": "Oct 2024",
+        "published": "",
+        "description": "Using bilinear MLPs to reverse-engineer image and language models from their weights.",
         "link": "research/bilinear"
     },
     {
-        "image": "research/disentangle.png",
-        "title": "Tokenized SAEs",
-        "alt": "A split arrow",
+        "title": "Weight-based Decomposition: A Case for Bilinear MLPs",
         "date": "Jun 2024",
+        "published": "ICML MI workshop",
+        "description": "Introducing bilinear MLPs as a new approach to weight-based interpretability.",
+        "link": "research/bilinear"
+    },
+    {
+        "title": "Tokenized SAEs: Disentangling SAE Reconstructions",
+        "date": "Jun 2024",
+        "published": "ICML MI workshop",
         "description": "We propose using a per-token bias in SAEs to separate token reconstructions from interesting, semantic features.",
-        "paper": "documents/tokenized_saes.pdf",
-        "code": "",
         "link": "research/tokenized"
     },
     {
-        "image": "research/trifecta.png",
-        "title": "The Trifecta",
-        "alt": "A trident",
+        "title": "The Trifecta: Three techniques for deeper Forward-Forward networks",
         "date": "Nov 2023",
+        "published": "TMLR",
         "description": "Three techniques to significantly improve the Forward-Forward algorithm. We achieve 84% on CIFAR-10.",
-        "paper": "https://arxiv.org/abs/2311.18130",
-        "code": "https://github.com/tdooms/trifecta",
         "link": "research/trifecta"
     }
+]
+const posts = [
+    {
+        "title": "Tokenized SAEs",
+        "date": "Aug 2024",
+        "published": "Lesswrong",
+        "description": "An informal write-up of the Tokenized SAEs paper.",
+        "link": "https://www.lesswrong.com/posts/P8qLZco6Zq8LaLHe9/tokenized-saes-infusing-per-token-biases",
+        "external": true
+    },
 ]
 const presentations = [
     {
         "title": "Weight-based interpretability",
         "date": "Oct 2024",
-        "icon": "fa-magnifying-glass",
-        "description": "A brief introduction to weight-based interpretability.",
-        "slides": "https://docs.google.com/presentation/d/1PdcHm0bgwIu3yhy6oWkwL1-fDGTPzTiyUilydognLlw/edit?usp=sharing",
+        "published": "Flanders AI Day",
+        "description": "A quick primer on weight-based interpretability.",
+        "link": "https://docs.google.com/presentation/d/1PdcHm0bgwIu3yhy6oWkwL1-fDGTPzTiyUilydognLlw/edit?usp=sharing",
+        "external": true
     },
     {
         "title": "Introduction to Transformers",
         "date": "Jan 2024",
-        "icon": "fa-diagram-next",
+        "published": "Lab meeting",
         "description": "An informal introduction to the Transformer architecture.",
-        "slides": "https://docs.google.com/presentation/d/1VBMEUE1bb5h48DFhSBZ8L20PJ1LwN1LMippYOZjLHos/edit?usp=sharing",
+        "link": "https://docs.google.com/presentation/d/1VBMEUE1bb5h48DFhSBZ8L20PJ1LwN1LMippYOZjLHos/edit?usp=sharing",
+        "external": true
     },
     {
         "title": "Embodied Language Models",
         "date": "Jun 2023",
-        "icon": "fa-robot",
+        "published": "University lecture",
         "description": "A presentation on the integration of LLMs into robotics.",
-        "slides": "https://docs.google.com/presentation/d/1oURN_cmpF-GYLYVCDLU7teZ2RL_I5oeMH8onfU7ffNM/edit?usp=sharing",
+        "link": "https://docs.google.com/presentation/d/1oURN_cmpF-GYLYVCDLU7teZ2RL_I5oeMH8onfU7ffNM/edit?usp=sharing",
+        "external": true
     },
     {
         "title": "Diffusion Models",
-        "icon": "fa-images",
         "date": "Jan 2023",
+        "published": "University lecture",
         "description": "A brief overview of diffusion models and the current SOTA.",
-        "slides": "https://docs.google.com/presentation/d/1s0gPSXldiHgu4AYji_ELhoDTNNluNiKgq8Ry_t3cJM0/edit?usp=sharing",
+        "link": "https://docs.google.com/presentation/d/1s0gPSXldiHgu4AYji_ELhoDTNNluNiKgq8Ry_t3cJM0/edit?usp=sharing",
+        "external": true
     },
 ]
+
 
 </script>
 
 
-<div class="columns">
-    <div class="column is-6">
-        <h5 class="title is-5"> Papers </h5>
-        {#each papers as paper}
-            <Paper {...paper} />
-        {/each}
-        <p> And much more to come...</p>
-    </div>
+<h5 class="title is-5 ml-2 mt-1"> Papers </h5>
+{#each papers as paper}
+    <Box {...paper} />
+{/each}
 
-    <div class="column is-6">
-        <h5 class="title is-5"> Presentations </h5>
-        {#each presentations as presentation}
-            <Presentation {...presentation} />
-        {/each}
-    </div>
-</div>
+<h5 class="title is-5 ml-2 mt-6"> Posts </h5>
+{#each posts as post}
+    <Box {...post} />
+{/each}
+
+<h5 class="title is-5 ml-2 mt-6"> Presentations </h5>
+{#each presentations as presentation}
+    <Box {...presentation} />
+{/each}
+
+
+<div class="mb-6"></div>
