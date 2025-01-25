@@ -7,7 +7,7 @@ It's written in Svelte and I try to update this regularly.
 
 ```bash
 npm install
-npm setup
+npm run setup
 npm run dev
 ```
 

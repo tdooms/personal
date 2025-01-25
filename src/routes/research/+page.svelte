@@ -5,21 +5,21 @@ const papers = [
     {
         "title": "Bilinear MLPs enable weight-based mechanistic interpretability",
         "date": "Oct 2024",
-        "published": "",
+        "published": "ICLR'25",
         "description": "Using bilinear MLPs to reverse-engineer image and language models from their weights.",
         "link": "research/bilinear"
     },
     {
         "title": "Weight-based Decomposition: A Case for Bilinear MLPs",
         "date": "Jun 2024",
-        "published": "ICML MI workshop",
+        "published": "ICML'24 MI workshop",
         "description": "Introducing bilinear MLPs as a new approach to weight-based interpretability.",
-        "link": "research/bilinear"
+        "link": "research/decomposition"
     },
     {
         "title": "Tokenized SAEs: Disentangling SAE Reconstructions",
         "date": "Jun 2024",
-        "published": "ICML MI workshop",
+        "published": "ICML'24 MI workshop",
         "description": "We propose using a per-token bias in SAEs to separate token reconstructions from interesting, semantic features.",
         "link": "research/tokenized"
     },

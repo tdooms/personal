@@ -14,7 +14,7 @@ kind: research
 <div class="mt-6"> </div>
 <Resources paper="https://arxiv.org/abs/2406.03947" code="https://github.com/tdooms/bilinear-decomposition" models="https://huggingface.co/collections/tdooms/bilinear-66991d82406db9529a7170d2" />
 
-> This page has been superseded in favour of our new [paper](https://arxiv.org/pdf/2410.08417). The new page can be found [here](/research/bilinear).
+> This page has been superseded by a newer [version](/research/bilinear), which discusses our updated [paper](https://arxiv.org/pdf/2410.08417).
 
 ### Background
 

@@ -14,8 +14,6 @@ kind: research
 <div class="mt-6"> </div>
 <Resources paper="https://arxiv.org/pdf/2410.08417" code="https://github.com/tdooms/bilinear-decomposition" models="https://huggingface.co/collections/tdooms/bilinear-transformers-tinystories-670e352e0f552bab121d861f" />
 
-> This page was recently updated with new results. The original page can be found [here](/research/bilinear/v1).
-
 ### Background
 
 Understanding models from their weights has long been a pipedream of many interpretability researchers.

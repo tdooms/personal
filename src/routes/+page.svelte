@@ -44,7 +44,7 @@
                 <p>
                     My academic interest lies in understanding neural networks from their weights. <br>
                     I believe this to be the most promising avenue to understanding what a model has learned. <br>
-                    Tensor decompositions help us understand what is important to the model.
+                    Tensor decompositions on the weights help us understand what is important to the model.
                 </p>
 
                 <p>
