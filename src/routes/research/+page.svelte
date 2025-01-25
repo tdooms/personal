@@ -36,6 +36,13 @@ const papers = [
 ]
 const presentations = [
     {
+        "title": "Weight-based interpretability",
+        "date": "Oct 2024",
+        "icon": "fa-magnifying-glass",
+        "description": "A brief introduction to weight-based interpretability.",
+        "slides": "https://docs.google.com/presentation/d/1PdcHm0bgwIu3yhy6oWkwL1-fDGTPzTiyUilydognLlw/edit?usp=sharing",
+    },
+    {
         "title": "Introduction to Transformers",
         "date": "Jan 2024",
         "icon": "fa-diagram-next",

@@ -35,16 +35,18 @@
     <div class="column">
         <div class="box">
             <div class="content">
-                <p> Hi, I'm Thomas! I'm a first year PhD student working on mechanistic interpretability in machine learning. </p>
+                <p> 
+                    Hi, I'm Thomas! I'm a first year PhD student working on techniques to interpret deep neural networks from their weights. 
+                </p>
 
                 <p> 
-                    My research focusses on understanding neural networks from their weights. 
-                    This allows us to make guarantees about their behaviour and failure modes.
+                    Analyzing the weights of neural networks can provide general insights into what the model has learnt.
+                    This allows us to faithfully and generally study model behaviour without relying on specific inputs.
                 </p>
 
                 <p> 
                     Machine learning models have become an undeniably useful tool in recent years. 
-                    Yet, they remain shrouded in mystery; both in research and everyday use. 
+                    Yet, they remain shrouded in mystery; both in research and everyday use.
                     Understanding these models will not only help their trustworthiness but guarantee their utility.
                 </p>
 

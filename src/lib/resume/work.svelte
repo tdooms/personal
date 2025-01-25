@@ -4,9 +4,9 @@
     const work = [
         {
             "icon": "icons/mats.jpg",
-            "date": "May 2024 - Jun 2024",
+            "date": "May 2024 - Sep 2024",
             "title": "MATS Program",
-            "text": "Mechanistic interpretability stream under Neel Nanda. Improved small-scale SAEs by disentangling token reconstructions from semantic features."
+            "text": "Mechanistic interpretability stream under Neel Nanda and Lee Sharkey. Improved SAEs by adding a token-specific lookup table and worked on a new interpretability method for bilinear MLPs."
         },
         {
             "icon": "icons/cuberdon.jpeg",
