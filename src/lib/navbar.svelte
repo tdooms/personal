@@ -26,7 +26,7 @@
     </div>
 
     <div class="column is-narrow">
-        <a href="."> <b style="font-weight: 800" class="title is-3"> {"tdooms"} </b> </a>
+        <a href="/"> <b style="font-weight: 800" class="title is-3"> {"tdooms"} </b> </a>
     </div>
 
     <div class="column">

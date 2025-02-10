@@ -7,10 +7,10 @@ kind: research
 <script>
     import Resources from "$lib/research/resources.svelte";
     import Cite from "$lib/research/cite.svelte";
-    import Pareto from "$lib/research/pareto.svelte"
+    import Pareto from "$lib/figures/pareto.svelte"
 </script>
 
-<p> <b>Thomas Dooms</b>, Daniel Wilhelm </p>
+<p> <b>Thomas Dooms*</b>, Daniel Wilhelm*</p>
 
 <div class="mt-6"> </div>
 <Resources paper="https://openreview.net/attachment?id=5Eas7HCe38&name=pdf" code="https://github.com/tdooms/smol-sae" />

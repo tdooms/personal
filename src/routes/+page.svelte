@@ -17,10 +17,13 @@
 
             <hr />
             <div class="block">
+                <span class="icon"><i class="fab fa-x-twitter"></i> </span>
+                <span> <a href="https://x.com/thomasdooms"> Twitter </span>
+            </div>
+            <div class="block">
                 <span class="icon"><i class="fas fa-envelope"></i> </span>
                 <span> <a href="mailto:doomsthomas@gmail.com"> Email </span>
             </div>
-
             <div class="block">
                 <span class="icon"><i class="fab fa-linkedin"></i> </span>
                 <span> <a href="https://www.linkedin.com/in/thomas-dooms-5518a4169/"> LinkedIn </a> </span>

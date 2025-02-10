@@ -25,12 +25,9 @@
 	"type": "module",
 	"dependencies": {
 		"bulma": "^1.0.3",
-		"bulma-extensions": "^6.2.7",
 		"chart.js": "^4.4.3",
 		"mdsvex": "^0.11.0",
-		"ndarray": "^1.0.19",
 		"node-sass": "^9.0.0",
-		"npyjs": "^0.6.0",
 		"rehype-katex-svelte": "^1.2.0",
 		"svelte-chartjs": "^3.1.5",
 		"sass": "^1.83.4"

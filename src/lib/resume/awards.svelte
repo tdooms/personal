@@ -1,5 +1,5 @@
 <script lang="ts">
-    import Award from "$lib/award.svelte";
+    import Award from "$lib/resume/award.svelte";
     
     const awards = [
         {

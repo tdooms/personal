@@ -12,7 +12,13 @@ kind: research
 <p> Michael T. Pearce*, <b>Thomas Dooms*</b>, Alice Rigg, Jose M. Oramas, Lee Sharkey </p>
 
 <div class="mt-6"> </div>
-<Resources paper="https://arxiv.org/pdf/2410.08417" code="https://github.com/tdooms/bilinear-decomposition" models="https://huggingface.co/collections/tdooms/bilinear-transformers-tinystories-670e352e0f552bab121d861f" />
+
+<Resources
+    paper="https://arxiv.org/pdf/2410.08417"
+    code="https://github.com/tdooms/bilinear-decomposition"
+    models="https://huggingface.co/collections/tdooms/bilinear-transformers-tinystories-670e352e0f552bab121d861f"
+    demo="/demos/bilinear"
+/>
 
 ### Background
 

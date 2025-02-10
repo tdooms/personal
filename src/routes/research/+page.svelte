@@ -7,7 +7,7 @@ const papers = [
         "date": "Oct 2024",
         "published": "ICLR'25",
         "description": "Using bilinear MLPs to reverse-engineer image and language models from their weights.",
-        "link": "research/bilinear"
+        "link": "research/bilinear",
     },
     {
         "title": "Weight-based Decomposition: A Case for Bilinear MLPs",

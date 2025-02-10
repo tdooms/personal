@@ -1,4 +1,4 @@
-<script lang="ts">
+<!-- <script lang="ts">
     import Navbar from "$lib/navbar.svelte";
     import { onMount } from 'svelte';
     import npyjs from "npyjs";
@@ -62,7 +62,7 @@
             imgData.data[i * 4] = color[0];     // R
             imgData.data[i * 4 + 1] = color[1]; // G
             imgData.data[i * 4 + 2] = color[2]; // B
-            imgData.data[i * 4 + 3] = 255;   // A
+            imgData.data[i * 4 + 3] = 255;      // A
         }
 
         ctx.imageSmoothingEnabled = false; // Keep pixelated look when scaling
@@ -79,4 +79,4 @@
             <canvas bind:this={element.canvas} width=280 height=280></canvas>
         </div>
     {/each}
-</div>
+</div> -->

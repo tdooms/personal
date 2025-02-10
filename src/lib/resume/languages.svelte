@@ -1,5 +1,5 @@
 <script lang="ts">
-    import Language from "$lib/language.svelte";
+    import Language from "$lib/resume/language.svelte";
 
     const languages = [
         {

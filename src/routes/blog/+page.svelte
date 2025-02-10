@@ -15,7 +15,6 @@
             location: "blog/questions"
         }
     ]
-
 </script>
 
 <div class="columns is-multiline">
