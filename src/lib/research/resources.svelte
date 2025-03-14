@@ -3,6 +3,7 @@
     export let code: string;
     export let models: string;
     export let demo: string;
+    export let video: string;
 </script>
 
 <div class="columns is-centered">
@@ -36,6 +37,17 @@
                 <i class="fa-solid fa-xl fa-database"></i>
             </span>
             <p> Models </p>
+        </a>
+    </div>
+    {/if}
+
+    {#if video}
+    <div class="column is-2">
+        <a class="box has-text-centered" href={video} target="_blank">
+            <span class="icon is-large">
+                <i class="fa-solid fa-xl fa-video"></i>
+            </span>
+            <p> Video </p>
         </a>
     </div>
     {/if}

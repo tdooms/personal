@@ -3,9 +3,23 @@
 
 const papers = [
     {
+        "title": "Parameterized Synthetic Text Generation with SimpleStories",
+        "date": "Mar 2025",
+        "published": "ICLR'25 SynthData workshop",
+        "description": "A synthetic dataset containing diverse but simple stories.",
+        "link": "research/simplestories",
+    },
+    {
+        "title": "Compositionality Unlocks Deep Interpretable Models",
+        "date": "Feb 2025",
+        "published": "AAAI'25 CoLoRAI workshop",
+        "description": "Scaling up weight-based interpretability to multi-layer models.",
+        "link": "research/xnets",
+    },
+    {
         "title": "Bilinear MLPs enable weight-based mechanistic interpretability",
         "date": "Oct 2024",
-        "published": "ICLR'25",
+        "published": "ICLR'25 spotlight",
         "description": "Using bilinear MLPs to reverse-engineer image and language models from their weights.",
         "link": "research/bilinear",
     },
